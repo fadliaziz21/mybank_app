@@ -89,14 +89,14 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           children: [
             TextButton(
               onPressed: () {
-                controller.jumpToPage(2);
+                controller.jumpToPage(onboardingList.length - 1);
               },
               child: Text('Skip'),
             ),
             Center(
               child: SmoothPageIndicator(
                 controller: controller,
-                count: 3,
+                count: onboardingList.length,
                 // effect: WormEffect(
                 //   spacing: 16,
                 //   dotColor: Colors.black26,
