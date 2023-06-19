@@ -9,13 +9,13 @@ List onboardingList = [
   ),
   _OnboardingItem(
     Colors.white,
-    'assets/images/onboarding/mybank_onboarding-1.png',
+    'assets/images/onboarding/mybank_onboarding-2.png',
     'Easy Bank Transfers',
     'National and International transfers at your fingertips',
   ),
   _OnboardingItem(
     Colors.white,
-    'assets/images/onboarding/mybank_onboarding-1.png',
+    'assets/images/onboarding/mybank_onboarding-3.png',
     'Bill Payments',
     'Make hassle free mobile payments from the comfort of your home.',
   ),
