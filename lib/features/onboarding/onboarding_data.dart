@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:mybank_app/constans/assets.dart';
 
 List onboardingList = [
   _OnboardingItem(
     Colors.white,
-    'assets/images/onboarding/mybank_onboarding-1.png',
+    Assets.onboardingImg[1],
     'Send & Receive Money',
     'Your virtual wallet is now a reality. Fast and easy way to send and receive money.',
   ),
   _OnboardingItem(
     Colors.white,
-    'assets/images/onboarding/mybank_onboarding-2.png',
+    Assets.onboardingImg[2],
     'Easy Bank Transfers',
     'National and International transfers at your fingertips',
   ),
   _OnboardingItem(
     Colors.white,
-    'assets/images/onboarding/mybank_onboarding-3.png',
+    Assets.onboardingImg[3],
     'Bill Payments',
     'Make hassle free mobile payments from the comfort of your home.',
   ),
