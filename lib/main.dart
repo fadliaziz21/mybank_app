@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/features/onboarding/onboarding_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
         useMaterial3: true,
         fontFamily: 'Montserrat',
       ),
