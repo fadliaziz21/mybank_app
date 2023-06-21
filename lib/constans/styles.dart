@@ -13,6 +13,7 @@ class Styles {
   static const TextStyle paragraphTextBlack = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 16,
+    fontStyle: FontStyle.normal,
     color: Colors.black,
   );
 
@@ -21,5 +22,16 @@ class Styles {
     fontSize: 16,
     fontStyle: FontStyle.normal,
     color: Colors.white,
+  );
+
+  static const TextStyle pinKeyNumText = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
+
+  static const SizedBox lineBreak25 = SizedBox(
+    height: 25.0,
   );
 }
