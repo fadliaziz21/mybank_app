@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/onboarding/onboarding_data.dart';
 import 'package:mybank_app/main.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -42,20 +43,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           const SizedBox(height: 18.0),
           Text(
             title,
-            style: TextStyle(
-              color: AppColors.mainColor,
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-            ),
+            style: Styles.onBoardingTitle,
           ),
           const SizedBox(height: 10.0),
           Text(
             subtitle,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16,
-            ),
+            style: Styles.paragraphTextBlack,
           ),
         ],
       ),
