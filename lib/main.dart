@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/font_family.dart';
 import 'package:mybank_app/features/onboarding/onboarding_screen.dart';
+import 'package:mybank_app/features/pin/pin_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +19,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
         useMaterial3: true,
-        fontFamily: 'Montserrat',
+        fontFamily: FontFamily.montserrat,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const OnBoardingPage(),
+      // home: const OnBoardingPage(),
+      home: const PinPage(),
     );
   }
 }
