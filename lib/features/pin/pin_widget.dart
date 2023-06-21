@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/styles.dart';
 
-class PinNumber extends StatelessWidget {
+class PinInput extends StatelessWidget {
   final TextEditingController textEditingController;
-  const PinNumber({required this.textEditingController});
+  const PinInput({required this.textEditingController});
 
   @override
   Widget build(BuildContext context) {

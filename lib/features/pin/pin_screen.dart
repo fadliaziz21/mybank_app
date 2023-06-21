@@ -56,7 +56,7 @@ class _PinPageState extends State<PinPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     for (int i = 0; i < pinInputRowList.length; i++) ...[
-                      PinNumber(
+                      PinInput(
                         textEditingController: pinInputRowList[i].inputCtrlr,
                       ),
                     ],
