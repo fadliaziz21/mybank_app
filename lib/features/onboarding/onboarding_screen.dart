@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
-import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/onboarding/onboarding_data.dart';
+import 'package:mybank_app/features/onboarding/onboarding_widget.dart';
 import 'package:mybank_app/main.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -21,39 +21,6 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     controller.dispose();
 
     super.dispose();
-  }
-
-  Widget buildPage({
-    required Color color,
-    required String urlImage,
-    required String title,
-    required String subtitle,
-  }) {
-    return Container(
-      color: color,
-      padding: EdgeInsets.all(25.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            urlImage,
-            fit: BoxFit.cover,
-            width: double.infinity,
-          ),
-          const SizedBox(height: 18.0),
-          Text(
-            title,
-            style: Styles.onBoardingTitle,
-          ),
-          const SizedBox(height: 10.0),
-          Text(
-            subtitle,
-            textAlign: TextAlign.center,
-            style: Styles.paragraphTextBlack,
-          ),
-        ],
-      ),
-    );
   }
 
   @override
