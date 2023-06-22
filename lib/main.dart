@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
         fontFamily: FontFamily.montserrat,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: const OnBoardingPage(),
-      home: const PinPage(),
+      home: const OnBoardingPage(),
+      // home: const PinPage(),
     );
   }
 }

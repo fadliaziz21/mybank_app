@@ -38,7 +38,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             },
             itemCount: onboardingList.length,
             itemBuilder: (context, index) {
-              return buildPage(
+              return OnBoardPage(
                 color: onboardingList[index].color,
                 urlImage: onboardingList[index].urlImage,
                 title: onboardingList[index].title,
@@ -53,7 +53,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               height: 50.0,
               width: 250.0,
               margin: EdgeInsets.only(
-                bottom: 50.0,
+                bottom: 35.0,
               ),
               child: TextButton(
                 style: ButtonStyle(
