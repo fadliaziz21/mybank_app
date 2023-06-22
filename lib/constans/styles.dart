@@ -26,9 +26,16 @@ class Styles {
 
   static const TextStyle pinKeyNumText = TextStyle(
     fontFamily: FontFamily.montserrat,
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: FontWeight.bold,
-    color: Colors.black,
+    color: Colors.white,
+  );
+
+  static const TextStyle pinInputText = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: AppColors.mainColor,
   );
 
   static const SizedBox lineBreak25 = SizedBox(
