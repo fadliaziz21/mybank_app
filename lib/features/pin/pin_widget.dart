@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 
 class PinInput extends StatelessWidget {
   final TextEditingController textEditingController;
-  const PinInput({required this.textEditingController});
+  final bool fieldPinCondition;
+  const PinInput(
+      {required this.textEditingController, required this.fieldPinCondition});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class PinInput extends StatelessWidget {
             borderSide: BorderSide(color: Colors.transparent),
           ),
           filled: true,
-          fillColor: Colors.white,
+          fillColor: fieldPinCondition ? Colors.white : AppColors.dangerColor,
         ),
         style: Styles.pinInputText,
       ),

@@ -4,6 +4,7 @@ import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/pin/pin_data.dart';
 import 'package:mybank_app/features/pin/pin_widget.dart';
+import 'package:mybank_app/main.dart';
 
 class PinPage extends StatefulWidget {
   const PinPage({super.key});
@@ -32,20 +33,24 @@ class _PinPageState extends State<PinPage> {
             children: [
               Container(
                 margin: EdgeInsets.only(
-                  top: 25,
+                  top: 50,
                 ),
                 child: Image.asset(
-                  Assets.appLogo,
-                  width: 50,
+                  Assets.myBankLogo,
+                  height: 25,
                 ),
               ),
               Styles.lineBreak25,
               Container(
-                child: Text(
-                  'Enter your PIN code',
-                  style: Styles.paragraphTextWhite,
-                ),
-              ),
+                  child: isPinTrue
+                      ? Text(
+                          'Enter your PIN code',
+                          style: Styles.paragraphTextWhite,
+                        )
+                      : Text(
+                          'Your PIN incorrect. Please try again.',
+                          style: Styles.paragraphTextWhite,
+                        )),
               Styles.lineBreak25,
               Container(
                 padding: EdgeInsets.only(
@@ -165,7 +170,7 @@ class _PinPageState extends State<PinPage> {
 
     if (pinIndex == 6) {
       print(strPin);
-      pinAuthentification(strPin);
+      pinAuth(strPin);
     }
   }
 
@@ -206,10 +211,19 @@ class _PinPageState extends State<PinPage> {
     }
   }
 
-  pinAuthentification(String pin) {
+  pinAuth(String pin) {
     String pinDefault = '123456';
     if (pinDefault == pin) {
       print('benar');
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return MyHomePage(title: 'Flutter Demo Home Page');
+          },
+        ),
+      );
     } else {
       for (int i = 0; i < 6; i++) {
         clearPin();
