@@ -7,7 +7,7 @@ class Styles {
     fontFamily: FontFamily.montserrat,
     fontSize: 28,
     fontWeight: FontWeight.bold,
-    color: AppColors.mainColor,
+    color: AppColors.primaryColor,
   );
 
   static const TextStyle paragraphTextBlack = TextStyle(
@@ -35,7 +35,7 @@ class Styles {
     fontFamily: FontFamily.montserrat,
     fontSize: 16,
     fontWeight: FontWeight.bold,
-    color: AppColors.mainColor,
+    color: AppColors.primaryColor,
   );
 
   static const SizedBox lineBreak25 = SizedBox(

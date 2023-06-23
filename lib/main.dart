@@ -17,13 +17,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
         useMaterial3: true,
         fontFamily: FontFamily.montserrat,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const OnBoardingPage(),
-      // home: const PinPage(),
+      // home: const OnBoardingPage(),
+      home: const PinPage(),
     );
   }
 }

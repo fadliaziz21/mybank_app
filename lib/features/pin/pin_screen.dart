@@ -14,6 +14,7 @@ class PinPage extends StatefulWidget {
 
 class _PinPageState extends State<PinPage> {
   int pinIndex = 0;
+  bool isPinTrue = true;
   List<String> currentPin = ["", "", "", "", "", ""];
 
   @override
@@ -24,7 +25,7 @@ class _PinPageState extends State<PinPage> {
           height: double.infinity,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: AppColors.mainColor,
+            color: AppColors.primaryColor,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -58,6 +59,7 @@ class _PinPageState extends State<PinPage> {
                     for (int i = 0; i < pinInputRowList.length; i++) ...[
                       PinInput(
                         textEditingController: pinInputRowList[i].inputCtrlr,
+                        fieldPinCondition: isPinTrue,
                       ),
                     ],
                   ],
@@ -144,6 +146,10 @@ class _PinPageState extends State<PinPage> {
   pinIndexSetup(String pin) {
     String strPin = '';
 
+    setState(() {
+      isPinTrue = true;
+    });
+
     if (pinIndex == 0) {
       pinIndex = 1;
     } else if (pinIndex < 6) {
@@ -159,6 +165,7 @@ class _PinPageState extends State<PinPage> {
 
     if (pinIndex == 6) {
       print(strPin);
+      pinAuthentification(strPin);
     }
   }
 
@@ -196,6 +203,20 @@ class _PinPageState extends State<PinPage> {
       setPin(pinIndex, '');
       currentPin[pinIndex - 1] = '';
       pinIndex--;
+    }
+  }
+
+  pinAuthentification(String pin) {
+    String pinDefault = '123456';
+    if (pinDefault == pin) {
+      print('benar');
+    } else {
+      for (int i = 0; i < 6; i++) {
+        clearPin();
+      }
+      setState(() {
+        isPinTrue = false;
+      });
     }
   }
 }

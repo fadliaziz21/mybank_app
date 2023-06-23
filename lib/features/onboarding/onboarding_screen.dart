@@ -58,7 +58,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               child: TextButton(
                 style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all<Color>(AppColors.mainColor),
+                      MaterialStateProperty.all<Color>(AppColors.primaryColor),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0),
@@ -94,7 +94,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     child: Text(
                       'Skip',
                       style: TextStyle(
-                        color: AppColors.mainColor,
+                        color: AppColors.primaryColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -112,7 +112,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         );
                       },
                       effect: SlideEffect(
-                        activeDotColor: AppColors.mainColor,
+                        activeDotColor: AppColors.primaryColor,
                       ),
                     ),
                   ),
@@ -128,7 +128,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     child: Text(
                       'Next',
                       style: TextStyle(
-                        color: AppColors.mainColor,
+                        color: AppColors.primaryColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
