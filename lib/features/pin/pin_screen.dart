@@ -228,8 +228,15 @@ class _PinPageState extends State<PinPage> {
       for (int i = 0; i < 6; i++) {
         clearPin();
       }
+
       setState(() {
         isPinTrue = false;
+      });
+
+      Future.delayed(const Duration(milliseconds: 1000), () {
+        setState(() {
+          isPinTrue = true;
+        });
       });
     }
   }
