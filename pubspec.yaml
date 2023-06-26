@@ -72,6 +72,15 @@ flutter:
     - assets/images/onboarding/mybank_onboarding-2.png
     - assets/images/onboarding/mybank_onboarding-3.png
 
+    - assets/icons/menu_icon/ic-scan_qr.png
+    - assets/icons/menu_icon/ic-transfer.png
+    - assets/icons/menu_icon/ic-nfc.png
+    - assets/icons/menu_icon/ic-bill.png
+    - assets/icons/menu_icon/ic-shopping.png
+    - assets/icons/menu_icon/ic-internet.png
+    - assets/icons/menu_icon/ic-zakat.png
+    - assets/icons/menu_icon/ic-insurance.png
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

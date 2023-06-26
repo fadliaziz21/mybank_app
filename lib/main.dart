@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/font_family.dart';
+import 'package:mybank_app/features/dashboard/dashboard_screen.dart';
 import 'package:mybank_app/features/onboarding/onboarding_screen.dart';
 import 'package:mybank_app/features/pin/pin_screen.dart';
 
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       // home: const OnBoardingPage(),
-      home: const PinPage(),
+      // home: const PinPage(),
+      home: const DashboardPage(),
     );
   }
 }
