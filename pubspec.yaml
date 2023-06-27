@@ -81,6 +81,11 @@ flutter:
     - assets/icons/menu_icon/ic-zakat.png
     - assets/icons/menu_icon/ic-insurance.png
 
+    - assets/icons/footer_icon/ic_footer-call.png
+    - assets/icons/footer_icon/ic_footer-history.png
+    - assets/icons/footer_icon/ic_footer-home.png
+    - assets/icons/footer_icon/ic_footer-profile.png
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

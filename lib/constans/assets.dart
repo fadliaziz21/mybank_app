@@ -7,4 +7,11 @@ class Assets {
     2: 'assets/images/onboarding/mybank_onboarding-2.png',
     3: 'assets/images/onboarding/mybank_onboarding-3.png',
   };
+
+  static const Map<int, dynamic> dashboardFooterImg = {
+    1: 'assets/icons/footer_icon/ic_footer-home.png',
+    2: 'assets/icons/footer_icon/ic_footer-history.png',
+    3: 'assets/icons/footer_icon/ic_footer-call.png',
+    4: 'assets/icons/footer_icon/ic_footer-profile.png',
+  };
 }
