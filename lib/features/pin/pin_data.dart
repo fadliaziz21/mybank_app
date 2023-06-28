@@ -8,17 +8,17 @@ TextEditingController pinFiveCtrlr = TextEditingController();
 TextEditingController pinSixCtrlr = TextEditingController();
 
 List pinInputRowList = [
-  _PinInputRowList(1, pinOneCtrlr),
-  _PinInputRowList(2, pinTwoCtrlr),
-  _PinInputRowList(3, pinThreeCtrlr),
-  _PinInputRowList(4, pinFourCtrlr),
-  _PinInputRowList(5, pinFiveCtrlr),
-  _PinInputRowList(6, pinSixCtrlr),
+  _PinInputRowItem(1, pinOneCtrlr),
+  _PinInputRowItem(2, pinTwoCtrlr),
+  _PinInputRowItem(3, pinThreeCtrlr),
+  _PinInputRowItem(4, pinFourCtrlr),
+  _PinInputRowItem(5, pinFiveCtrlr),
+  _PinInputRowItem(6, pinSixCtrlr),
 ];
 
-class _PinInputRowList {
+class _PinInputRowItem {
   final int row;
   final TextEditingController inputCtrlr;
 
-  _PinInputRowList(this.row, this.inputCtrlr);
+  _PinInputRowItem(this.row, this.inputCtrlr);
 }
