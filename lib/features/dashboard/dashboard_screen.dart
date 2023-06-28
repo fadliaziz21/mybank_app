@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/assets.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/features/dashboard/dashboard_data.dart';
+import 'package:mybank_app/features/transaction_history/transaction_history_screen.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -12,6 +13,23 @@ class DashboardPage extends StatefulWidget {
 
 class _DashboardPageState extends State<DashboardPage> {
   int selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    if (index == 1) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return TransactionHistoryPage();
+          },
+        ),
+      );
+    } else {
+      setState(() {
+        selectedIndex = index;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,8 +71,8 @@ class _DashboardPageState extends State<DashboardPage> {
     switch (selectedIndex) {
       case 0:
         return const Center(child: Text('Home'));
-      case 1:
-        return const Center(child: Text('Search'));
+      // case 1:
+      //   return const Center(child: Text('Search'));
       case 2:
         return const Center(child: Text('Account'));
       default:
@@ -84,11 +102,7 @@ class _DashboardPageState extends State<DashboardPage> {
         ),
         child: BottomNavigationBar(
           currentIndex: selectedIndex,
-          onTap: (value) {
-            setState(() {
-              selectedIndex = value;
-            });
-          },
+          onTap: _onItemTapped,
           items: [
             BottomNavigationBarItem(
               icon: ImageIcon(
