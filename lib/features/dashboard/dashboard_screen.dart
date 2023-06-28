@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/assets.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/features/dashboard/dashboard_data.dart';
+import 'package:mybank_app/features/dashboard_home/dashboard_home_screen.dart';
 import 'package:mybank_app/features/transaction_history/transaction_history_screen.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -70,7 +71,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget _buildBody() {
     switch (selectedIndex) {
       case 0:
-        return const Center(child: Text('Home'));
+        return DashboardHomePage();
       // case 1:
       //   return const Center(child: Text('Search'));
       case 2:
