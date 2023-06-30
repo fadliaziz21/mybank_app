@@ -41,4 +41,28 @@ class Styles {
   static const SizedBox lineBreak25 = SizedBox(
     height: 25.0,
   );
+
+  static const BoxShadow smallBoxShadow = BoxShadow(
+    color: AppColors.secondaryColor,
+    spreadRadius: 1.0,
+    blurRadius: 10.0,
+    offset: Offset(0.0, 1.0),
+  );
+
+  static const BoxShadow mediumBoxShadow = BoxShadow(
+    color: AppColors.secondaryColor,
+    spreadRadius: 3.0,
+    blurRadius: 15.0,
+    offset: Offset(0.0, 1.0),
+  );
+
+  static const BorderRadius topBorderRadius = BorderRadius.only(
+    topLeft: Radius.circular(25.0),
+    topRight: Radius.circular(25.0),
+  );
+
+  static const BorderRadius bottomBorderRadius = BorderRadius.only(
+    bottomLeft: Radius.circular(25.0),
+    bottomRight: Radius.circular(25.0),
+  );
 }
