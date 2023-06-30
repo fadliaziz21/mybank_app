@@ -27,9 +27,8 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
   dashboardHomeMenu() {
     return Container(
       height: 250.0,
-      padding:
-          EdgeInsets.only(left: 10.0, top: 20.0, right: 10.0, bottom: 10.0),
-      margin: const EdgeInsets.only(bottom: 10.0),
+      padding: Styles.eiAll10Top20,
+      margin: Styles.eiBottom10,
       decoration: BoxDecoration(
         color: AppColors.primaryColor,
         borderRadius: Styles.bottomBorderRadius,
