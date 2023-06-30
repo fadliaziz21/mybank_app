@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_data.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_widget.dart';
 
@@ -29,19 +31,10 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
           EdgeInsets.only(left: 10.0, top: 20.0, right: 10.0, bottom: 10.0),
       margin: const EdgeInsets.only(bottom: 10.0),
       decoration: BoxDecoration(
-        // color: Colors.lightBlue,
-        color: Color.fromARGB(255, 0, 127, 191),
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20.0),
-          bottomRight: Radius.circular(20.0),
-        ),
+        color: AppColors.primaryColor,
+        borderRadius: Styles.bottomBorderRadius,
         boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade800,
-            spreadRadius: 3.0,
-            blurRadius: 15.0,
-            offset: Offset(0.0, 1.0),
-          ),
+          Styles.mediumBoxShadow,
         ],
       ),
       child: GridView.builder(

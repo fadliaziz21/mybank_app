@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/assets.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/dashboard/dashboard_data.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_screen.dart';
 import 'package:mybank_app/features/transaction_history/transaction_history_screen.dart';
@@ -49,7 +50,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget _buildAppBar() {
     return AppBar(
       backgroundColor: AppColors.primaryColor,
-      shadowColor: Colors.black,
+      shadowColor: AppColors.secondaryColor,
       toolbarHeight: 80.0,
       title: Container(
         width: 40.0,
@@ -84,23 +85,13 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget _buildBottomNavigationBar() {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(25.0),
-          topRight: Radius.circular(25.0),
-        ),
+        borderRadius: Styles.topBorderRadius,
         boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade800,
-            spreadRadius: 1,
-            blurRadius: 10,
-          ),
+          Styles.smallBoxShadow,
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(25.0),
-          topRight: Radius.circular(25.0),
-        ),
+        borderRadius: Styles.topBorderRadius,
         child: BottomNavigationBar(
           currentIndex: selectedIndex,
           onTap: _onItemTapped,
