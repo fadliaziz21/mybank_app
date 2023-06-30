@@ -72,6 +72,11 @@ flutter:
     - assets/images/onboarding/mybank_onboarding-2.png
     - assets/images/onboarding/mybank_onboarding-3.png
 
+    - assets/images/debit_card/mybank_dc-silver.png
+    - assets/images/debit_card/mybank_dc-gold.png
+    - assets/images/debit_card/mybank_dc-platinum.png
+    - assets/images/debit_card/mybank_dc-platinumpriority.png
+
     - assets/icons/menu_icon/ic-scan_qr.png
     - assets/icons/menu_icon/ic-transfer.png
     - assets/icons/menu_icon/ic-nfc.png
