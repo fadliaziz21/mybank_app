@@ -65,4 +65,8 @@ class Styles {
     bottomLeft: Radius.circular(25.0),
     bottomRight: Radius.circular(25.0),
   );
+
+  static const EdgeInsets eiBottom10 = EdgeInsets.only(bottom: 10.0);
+  static const EdgeInsets eiAll10Top20 =
+      EdgeInsets.only(left: 10.0, top: 20.0, right: 10.0, bottom: 10.0);
 }
