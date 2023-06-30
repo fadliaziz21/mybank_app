@@ -18,11 +18,11 @@ class Assets {
   static const Map<int, dynamic> dashboardMenuImg = {
     1: 'assets/icons/menu_icon/ic-scan_qr.png',
     2: 'assets/icons/menu_icon/ic-transfer.png',
-    3: 'assets/icons/menu_icon/ic-nfc-call.png',
+    3: 'assets/icons/menu_icon/ic-nfc.png',
     4: 'assets/icons/menu_icon/ic-bill.png',
     5: 'assets/icons/menu_icon/ic-shopping.png',
     6: 'assets/icons/menu_icon/ic-internet.png',
-    7: 'assets/icons/menu_icon/ic-zakat-call.png',
+    7: 'assets/icons/menu_icon/ic-zakat.png',
     8: 'assets/icons/menu_icon/ic-insurance.png',
   };
 }
