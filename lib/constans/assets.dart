@@ -25,4 +25,11 @@ class Assets {
     7: 'assets/icons/menu_icon/ic-zakat.png',
     8: 'assets/icons/menu_icon/ic-insurance.png',
   };
+
+  static const Map<int, dynamic> savingsCardImg = {
+    1: 'assets/images/debit_card/mybank_dc-silver.png',
+    2: 'assets/images/debit_card/mybank_dc-gold.png',
+    3: 'assets/images/debit_card/mybank_dc-platinum.png',
+    4: 'assets/images/debit_card/mybank_dc-platinumpriority.png',
+  };
 }
