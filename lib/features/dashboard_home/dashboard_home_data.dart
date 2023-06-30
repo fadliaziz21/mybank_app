@@ -1,4 +1,5 @@
 import 'package:mybank_app/constans/assets.dart';
+import 'package:mybank_app/constans/main_data.dart';
 
 List dashboardMenuList = [
   _DashboardMenuItem(
@@ -35,9 +36,25 @@ List dashboardMenuList = [
   ),
 ];
 
+List dashboardSavingsMenuList = [
+  _DashboardSavingsMenuItem({
+    'cardType': {
+      'cardImg': AppData.cardType[1]['cardImage'],
+    },
+    'balance': '9.876.543,18',
+    'accountNumber': '1234567890',
+  }),
+];
+
 class _DashboardMenuItem {
   final String urlImage;
   final String menuName;
 
   _DashboardMenuItem(this.urlImage, this.menuName);
+}
+
+class _DashboardSavingsMenuItem {
+  final Map<String, dynamic> savingsCard;
+
+  _DashboardSavingsMenuItem(this.savingsCard);
 }
