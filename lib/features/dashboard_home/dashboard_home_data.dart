@@ -36,25 +36,18 @@ List dashboardMenuList = [
   ),
 ];
 
-List dashboardSavingsMenuList = [
-  _DashboardSavingsMenuItem({
-    'cardType': {
-      'cardImg': AppData.cardType[1]['cardImage'],
-    },
-    'balance': '9.876.543,18',
-    'accountNumber': '1234567890',
-  }),
-];
+Map<String, dynamic> dashboardSavingsMenuList = {
+  'cardType': {
+    'cardImage': AppData.cardType[1]['cardImage'],
+    'cardName': AppData.cardType[1]['cardName'],
+  },
+  'balance': '9.876.543,18',
+  'accountNumber': '1234567890',
+};
 
 class _DashboardMenuItem {
   final String urlImage;
   final String menuName;
 
   _DashboardMenuItem(this.urlImage, this.menuName);
-}
-
-class _DashboardSavingsMenuItem {
-  final Map<String, dynamic> savingsCard;
-
-  _DashboardSavingsMenuItem(this.savingsCard);
 }
