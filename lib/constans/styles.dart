@@ -101,5 +101,21 @@ class Styles {
   static const EdgeInsets eiAll10Top20 =
       EdgeInsets.only(left: 10.0, top: 20.0, right: 10.0, bottom: 10.0);
   static const EdgeInsets eiHorizontal20Vertical10 =
-      EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 10);
+      EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0, bottom: 10.0);
+}
+
+class FontStyles {
+  static const TextStyle textBlack14 = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 14,
+    fontStyle: FontStyle.normal,
+    color: Colors.black,
+  );
+
+  static const TextStyle textBlack18bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
 }
