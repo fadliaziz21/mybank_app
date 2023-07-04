@@ -141,7 +141,6 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            margin: Styles.eiRight5,
             child: Text(
               cardName + ' - ',
               textAlign: TextAlign.left,
