@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
-import 'package:mybank_app/constans/main_data.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_data.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_widget.dart';
@@ -68,12 +67,12 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
         child: Row(
           children: [
             DashboardSavingsMenuCard(
-              urlImage: AppData.cardType[1]['cardImage'],
+              urlImage: dashboardSavingsMenuList['cardType']['cardImage'],
             ),
             DashboardSavingsMenuInfo(
-                cardName: 'Silver',
-                balance: '9.876.543,18',
-                accountNumber: '1234567890'),
+                cardName: dashboardSavingsMenuList['cardType']['cardName'],
+                balance: dashboardSavingsMenuList['balance'],
+                accountNumber: dashboardSavingsMenuList['accountNumber']),
           ],
         ),
       ),
