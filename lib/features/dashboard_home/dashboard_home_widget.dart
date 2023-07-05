@@ -41,7 +41,7 @@ class DashboardMenu extends StatelessWidget {
                   child: Text(
                     menuName,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -66,7 +66,7 @@ class DashboardSavingsMenuCard extends StatelessWidget {
     return Padding(
       padding: Styles.eiAll7,
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           boxShadow: [
             Styles.smallBoxShadow,
           ],
@@ -98,7 +98,7 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Balance',
               textAlign: TextAlign.left,
               style: Styles.cardBalanceTitleText,
@@ -125,7 +125,7 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
           ),
           Container(
             margin: Styles.eiLeft5,
-            child: Text(
+            child: const Text(
               'IDR',
               textAlign: TextAlign.left,
               style: Styles.textBlack12,

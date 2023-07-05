@@ -30,7 +30,7 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       appBar: PreferredSize(
         child: _buildAppBar(),
-        preferredSize: Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(80.0),
       ),
       body: SafeArea(
         child: _buildBody(),
@@ -50,7 +50,7 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       actions: [
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.notifications,
             color: Colors.white,
             size: 30.0,
@@ -64,7 +64,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget _buildBody() {
     switch (selectedIndex) {
       case 0:
-        return DashboardHomePage();
+        return const DashboardHomePage();
       // case 1:
       //   return const Center(child: Text('Search'));
       case 2:
@@ -76,7 +76,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
   Widget _buildBottomNavigationBar() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: Styles.topBorderRadius25,
         boxShadow: [
           Styles.smallBoxShadow,

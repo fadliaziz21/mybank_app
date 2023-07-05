@@ -24,7 +24,7 @@ class _PinPageState extends State<PinPage> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: AppColors.primaryColor,
           ),
           child: Column(
@@ -42,11 +42,11 @@ class _PinPageState extends State<PinPage> {
               Styles.lineBreak25,
               Container(
                   child: isPinTrue
-                      ? Text(
+                      ? const Text(
                           'Enter your PIN code',
                           style: Styles.paragraphTextWhite,
                         )
-                      : Text(
+                      : const Text(
                           'Your PIN incorrect. Please try again.',
                           style: Styles.paragraphTextWhite,
                         )),

@@ -38,7 +38,7 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
       child: Scaffold(
         appBar: PreferredSize(
           child: _buildAppBar(),
-          preferredSize: Size.fromHeight(80.0),
+          preferredSize: const Size.fromHeight(80.0),
         ),
         body: Center(
           child: SafeArea(

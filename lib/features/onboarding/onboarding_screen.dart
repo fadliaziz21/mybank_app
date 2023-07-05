@@ -28,7 +28,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.only(bottom: 60.0),
+          padding: const EdgeInsets.only(bottom: 60.0),
           child: PageView.builder(
             controller: controller,
             onPageChanged: (index) {
@@ -52,7 +52,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           ? Container(
               height: 50.0,
               width: 250.0,
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 bottom: 35.0,
               ),
               child: TextButton(
@@ -76,7 +76,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 },
                 child: Text(
                   'Get Started',
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
               ),
             )
@@ -107,11 +107,11 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       onDotClicked: (index) {
                         controller.animateToPage(
                           index,
-                          duration: Duration(milliseconds: 500),
+                          duration: const Duration(milliseconds: 500),
                           curve: Curves.easeIn,
                         );
                       },
-                      effect: SlideEffect(
+                      effect: const SlideEffect(
                         activeDotColor: AppColors.primaryColor,
                       ),
                     ),
@@ -119,7 +119,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   TextButton(
                     onPressed: () {
                       controller.nextPage(
-                        duration: Duration(
+                        duration: const Duration(
                           milliseconds: 500,
                         ),
                         curve: Curves.easeInOut,

@@ -32,7 +32,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
       height: 250.0,
       padding: Styles.eiAll10Top20,
       margin: Styles.eiBottom10,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.primaryColor,
         borderRadius: Styles.bottomBorderRadius25,
         boxShadow: [
@@ -41,7 +41,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
       ),
       child: GridView.builder(
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
         itemBuilder: (context, index) {
           return DashboardMenu(
             urlImage: dashboardMenuList[index].urlImage,
@@ -61,7 +61,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: Styles.allBorderRadiusCircular10,
-          boxShadow: [
+          boxShadow: const [
             Styles.smallBoxShadow,
           ],
         ),
@@ -87,19 +87,19 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
         child: Row(
           children: [
             Container(
-              child: Text(
+              child: const Text(
                 'Recent Transactions',
                 textAlign: TextAlign.left,
                 style: FontStyles.textBlack18bold,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Container(
               child: InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, '/transaction-history');
                 },
-                child: Text(
+                child: const Text(
                   'See All',
                   textAlign: TextAlign.right,
                   style: FontStyles.textBlack14,

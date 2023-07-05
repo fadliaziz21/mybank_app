@@ -17,7 +17,7 @@ class DashboardAppBar extends StatelessWidget {
       ),
       actions: [
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.notifications,
             color: Colors.white,
             size: 30,
