@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
+import 'package:mybank_app/features/transaction_history/transaction_history_widget.dart';
 
 class TransactionHistoryPage extends StatefulWidget {
   const TransactionHistoryPage({super.key});
@@ -13,15 +14,9 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
-  final _selectedColor = Color(0xff1a73e8);
-  final _tabs = [
-    Tab(text: 'Tab1'),
-    Tab(text: 'Tab2'),
-  ];
-
   @override
   void initState() {
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
     super.initState();
   }
 
@@ -41,42 +36,7 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
           child: _buildAppBar(),
           preferredSize: const Size.fromHeight(80.0),
         ),
-        body: Center(
-          child: SafeArea(
-            // child: Text("Transaction History"),
-            child: Column(
-              children: [
-                Container(
-                  height: kToolbarHeight - 15.0,
-                  margin: Styles.eiTop50,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: TabBar(
-                    controller: _tabController,
-                    indicator: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        color: _selectedColor),
-                    labelColor: AppColors.whiteColor,
-                    unselectedLabelColor: AppColors.darkColor,
-                    tabs: _tabs,
-                  ),
-                ),
-                Expanded(
-                  child: TabBarView(
-                    children: [
-                      Text(
-                        'Tab 1',
-                      ),
-                      Text('Tab 2'),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
+        body: _buildBody(),
       ),
     );
   }
@@ -90,6 +50,52 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
       title: const Text(
         'Transaction History',
         style: FontStyles.textWhite,
+      ),
+    );
+  }
+
+  Widget _buildBody() {
+    return Center(
+      child: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              height: 35.0,
+              margin: Styles.eiTop25,
+              child: TabBar(
+                indicator: BoxDecoration(
+                  borderRadius: BorderRadius.circular(35.0),
+                  color: AppColors.primaryColor,
+                ),
+                indicatorSize: TabBarIndicatorSize.label,
+                controller: _tabController,
+                padding: EdgeInsets.symmetric(horizontal: 35.0),
+                labelColor: AppColors.whiteColor,
+                unselectedLabelColor: AppColors.primaryColor,
+                dividerColor: Colors.transparent,
+                tabs: [
+                  TransactionHistoryTabBar(
+                    labelName: 'Income',
+                  ),
+                  TransactionHistoryTabBar(
+                    labelName: 'Outcome',
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  Text(
+                    'Tab 1',
+                  ),
+                  Text('Tab 2'),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
