@@ -42,11 +42,11 @@ class _PinPageState extends State<PinPage> {
                   child: isPinTrue
                       ? const Text(
                           'Enter your PIN code',
-                          style: Styles.paragraphTextWhite,
+                          style: FontStyles.textWhite16,
                         )
                       : const Text(
                           'Your PIN incorrect. Please try again.',
-                          style: Styles.paragraphTextWhite,
+                          style: FontStyles.textWhite16,
                         )),
               Styles.lineBreak25,
               Container(

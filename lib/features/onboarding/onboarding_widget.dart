@@ -29,13 +29,13 @@ class OnBoardPage extends StatelessWidget {
           const SizedBox(height: 18.0),
           Text(
             title,
-            style: Styles.onBoardingTitle,
+            style: FontStyles.textPrimary28bold,
           ),
           const SizedBox(height: 10.0),
           Text(
             subtitle,
             textAlign: TextAlign.center,
-            style: Styles.paragraphTextBlack,
+            style: FontStyles.textDark16,
           ),
         ],
       ),

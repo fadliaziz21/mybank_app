@@ -90,7 +90,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
               child: const Text(
                 'Recent Transactions',
                 textAlign: TextAlign.left,
-                style: FontStyles.textBlack18bold,
+                style: FontStyles.textDark18bold,
               ),
             ),
             const Spacer(),
@@ -102,7 +102,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
                 child: const Text(
                   'See All',
                   textAlign: TextAlign.right,
-                  style: FontStyles.textBlack14,
+                  style: FontStyles.textDark14,
                 ),
               ),
             )

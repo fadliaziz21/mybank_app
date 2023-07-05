@@ -29,7 +29,7 @@ class PinInput extends StatelessWidget {
           filled: true,
           fillColor: fieldPinCondition ? Colors.white : AppColors.dangerColor,
         ),
-        style: Styles.pinInputText,
+        style: FontStyles.textPrimary16bold,
       ),
     );
   }
@@ -59,7 +59,7 @@ class PinKeyNum extends StatelessWidget {
         child: Text(
           '$keyNum',
           textAlign: TextAlign.center,
-          style: Styles.pinKeyNumText,
+          style: FontStyles.textWhite18bold,
         ),
       ),
     );

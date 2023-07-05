@@ -104,7 +104,7 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
             const Text(
               'Balance',
               textAlign: TextAlign.left,
-              style: Styles.cardBalanceTitleText,
+              style: FontStyles.textDark14w500,
             ),
             savingsMenuBalanceInfo(),
             savingsMenuCardInfo(),
@@ -124,14 +124,14 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
           Text(
             balance,
             textAlign: TextAlign.left,
-            style: Styles.cardBalanceSubtitleText,
+            style: FontStyles.textDark20bold,
           ),
           Container(
             margin: Styles.eiLeft5,
             child: const Text(
               'IDR',
               textAlign: TextAlign.left,
-              style: Styles.textBlack12,
+              style: FontStyles.textDark12,
             ),
           ),
         ],
@@ -147,13 +147,13 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
             child: Text(
               cardName + ' - ',
               textAlign: TextAlign.left,
-              style: Styles.textBlack14,
+              style: FontStyles.textDark14,
             ),
           ),
           Text(
             accountNumber,
             textAlign: TextAlign.left,
-            style: Styles.textBlack14w500,
+            style: FontStyles.textDark14w500,
           ),
         ],
       ),
