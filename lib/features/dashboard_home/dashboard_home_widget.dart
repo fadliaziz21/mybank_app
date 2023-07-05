@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 
 class DashboardMenu extends StatelessWidget {
@@ -43,11 +42,7 @@ class DashboardMenu extends StatelessWidget {
                   child: Text(
                     menuName,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 11,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.whiteColor,
-                    ),
+                    style: FontStyles.textWhite11bold,
                   ),
                 ),
               )
