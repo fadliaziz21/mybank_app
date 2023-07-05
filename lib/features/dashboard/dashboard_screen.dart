@@ -52,7 +52,7 @@ class _DashboardPageState extends State<DashboardPage> {
         IconButton(
           icon: const Icon(
             Icons.notifications,
-            color: Colors.white,
+            color: AppColors.whiteColor,
             size: 30.0,
           ),
           onPressed: () {},

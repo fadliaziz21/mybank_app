@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/onboarding/onboarding_data.dart';
 import 'package:mybank_app/features/onboarding/onboarding_widget.dart';
-import 'package:mybank_app/main.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingPage extends StatefulWidget {
@@ -28,7 +28,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.only(bottom: 60.0),
+          padding: Styles.eiBottom60,
           child: PageView.builder(
             controller: controller,
             onPageChanged: (index) {
@@ -52,9 +52,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           ? Container(
               height: 50.0,
               width: 250.0,
-              margin: const EdgeInsets.only(
-                bottom: 35.0,
-              ),
+              margin: Styles.eiBottom35,
               child: TextButton(
                 style: ButtonStyle(
                   backgroundColor:
@@ -62,23 +60,22 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0),
-                      // side: BorderSide(color: AppColors.mainColor),
                     ),
                   ),
                 ),
                 onPressed: () async {
                   Navigator.pushNamed(context, '/home');
                 },
-                child: Text(
+                child: const Text(
                   'Get Started',
-                  style: const TextStyle(color: Colors.white),
+                  style: FontStyles.textWhite,
                 ),
               ),
             )
           : Container(
-              padding: EdgeInsets.symmetric(horizontal: 15.0),
+              padding: Styles.eiSymetric15,
               height: 80.0,
-              color: Colors.white,
+              color: AppColors.whiteColor,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -86,13 +83,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     onPressed: () {
                       controller.jumpToPage(onboardingList.length - 1);
                     },
-                    child: Text(
+                    child: const Text(
                       'Skip',
-                      style: TextStyle(
-                        color: AppColors.primaryColor,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: FontStyles.textPrimary16bold,
                     ),
                   ),
                   Center(
@@ -120,13 +113,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         curve: Curves.easeInOut,
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'Next',
-                      style: TextStyle(
-                        color: AppColors.primaryColor,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: FontStyles.textPrimary16bold,
                     ),
                   ),
                 ],

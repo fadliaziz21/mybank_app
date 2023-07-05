@@ -9,7 +9,7 @@ class DashboardAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.primaryColor,
-      shadowColor: Colors.black,
+      shadowColor: AppColors.darkColor,
       toolbarHeight: 80,
       title: Container(
         width: 40,
@@ -19,7 +19,7 @@ class DashboardAppBar extends StatelessWidget {
         IconButton(
           icon: const Icon(
             Icons.notifications,
-            color: Colors.white,
+            color: AppColors.whiteColor,
             size: 30,
           ),
           onPressed: () {},

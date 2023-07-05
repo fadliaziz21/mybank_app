@@ -17,7 +17,7 @@ class OnBoardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: color,
-      padding: EdgeInsets.all(25.0),
+      padding: Styles.eiAll25,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

@@ -21,10 +21,10 @@ class PinInput extends StatelessWidget {
         obscuringCharacter: '●',
         textAlign: TextAlign.center,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(15.0),
+          contentPadding: Styles.eiAll15,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
-            borderSide: BorderSide(color: Colors.transparent),
+            borderSide: const BorderSide(color: Colors.transparent),
           ),
           filled: true,
           fillColor: fieldPinCondition ? Colors.white : AppColors.dangerColor,
@@ -90,7 +90,7 @@ class PinKeyIcon extends StatelessWidget {
         onPressed: onPressed,
         child: Icon(
           iconName,
-          color: Colors.white,
+          color: AppColors.whiteColor,
         ),
       ),
     );

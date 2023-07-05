@@ -31,9 +31,7 @@ class _PinPageState extends State<PinPage> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                margin: EdgeInsets.only(
-                  top: 50,
-                ),
+                margin: Styles.eiTop50,
                 child: Image.asset(
                   Assets.myBankLogo,
                   height: 25,
@@ -52,11 +50,7 @@ class _PinPageState extends State<PinPage> {
                         )),
               Styles.lineBreak25,
               Container(
-                padding: EdgeInsets.only(
-                  left: 50.0,
-                  right: 50.0,
-                  bottom: 25.0,
-                ),
+                padding: Styles.eiHorizontal50Vertical25,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -119,7 +113,7 @@ class _PinPageState extends State<PinPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Container(
+                        const SizedBox(
                           height: 60.0,
                           width: 60.0,
                         ),

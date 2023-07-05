@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/styles.dart';
 
 class TransactionHistoryPage extends StatefulWidget {
   const TransactionHistoryPage({super.key});
@@ -56,8 +57,8 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
                     indicator: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         color: _selectedColor),
-                    labelColor: Colors.white,
-                    unselectedLabelColor: Colors.black,
+                    labelColor: AppColors.whiteColor,
+                    unselectedLabelColor: AppColors.darkColor,
                     tabs: _tabs,
                   ),
                 ),
@@ -86,7 +87,7 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
       toolbarHeight: 80.0,
       title: const Text(
         'Transaction History',
-        style: TextStyle(color: Colors.white),
+        style: FontStyles.textWhite,
       ),
     );
   }

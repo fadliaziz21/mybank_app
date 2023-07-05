@@ -59,7 +59,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
       child: Container(
         height: 100.0,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.whiteColor,
           borderRadius: Styles.allBorderRadiusCircular10,
           boxShadow: const [
             Styles.smallBoxShadow,
