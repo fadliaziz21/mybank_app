@@ -67,12 +67,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   ),
                 ),
                 onPressed: () async {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                        builder: (context) => MyHomePage(
-                              title: 'Home Pages',
-                            )),
-                  );
+                  Navigator.pushNamed(context, '/home');
                 },
                 child: Text(
                   'Get Started',
