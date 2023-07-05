@@ -18,16 +18,16 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            dashboardHomeMenu(),
-            dashboardSavingsMenu(),
-            dashboardRecentTransactionTitle()
+            homeContainer(),
+            savingsContainer(),
+            recentTransactionTitleContainer()
           ],
         ),
       ),
     );
   }
 
-  dashboardHomeMenu() {
+  homeContainer() {
     return Container(
       height: 250.0,
       padding: Styles.eiAll10Top20,
@@ -53,7 +53,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
     );
   }
 
-  dashboardSavingsMenu() {
+  savingsContainer() {
     return Padding(
       padding: Styles.eiHorizontal20Vertical10,
       child: Container(
@@ -80,7 +80,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
     );
   }
 
-  dashboardRecentTransactionTitle() {
+  recentTransactionTitleContainer() {
     return Padding(
       padding: Styles.eiHorizontal20Vertical10,
       child: Row(
