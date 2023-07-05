@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
       // home: const OnBoardingPage(),
       // home: const PinPage(),
       // home: const DashboardPage(),
-      home: const TransactionHistoryPage(),
-      initialRoute: '/',
+      // home: const TransactionHistoryPage(),
+      initialRoute: '/transaction-history',
       routes: {
         '/': (context) => const OnBoardingPage(),
         '/home': (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
