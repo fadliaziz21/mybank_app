@@ -13,7 +13,6 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
   late TabController _tabController;
 
   final _selectedColor = Color(0xff1a73e8);
-  final _unselectedColor = Color(0xff5f6368);
   final _tabs = [
     Tab(text: 'Tab1'),
     Tab(text: 'Tab2'),

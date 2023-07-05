@@ -4,7 +4,6 @@ import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/dashboard/dashboard_data.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_screen.dart';
-import 'package:mybank_app/features/transaction_history/transaction_history_screen.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -18,14 +17,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
   void _onItemTapped(int index) {
     if (index == 1) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) {
-            return TransactionHistoryPage();
-          },
-        ),
-      );
+      Navigator.pushNamed(context, '/transaction-history');
     } else {
       setState(() {
         selectedIndex = index;

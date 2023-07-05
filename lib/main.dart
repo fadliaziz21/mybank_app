@@ -28,6 +28,14 @@ class MyApp extends StatelessWidget {
       // home: const PinPage(),
       // home: const DashboardPage(),
       home: const TransactionHistoryPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const OnBoardingPage(),
+        '/home': (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
+        '/pin': (context) => const PinPage(),
+        '/dashboard': (context) => const DashboardPage(),
+        '/transaction-history': (context) => const TransactionHistoryPage(),
+      },
     );
   }
 }

@@ -4,7 +4,6 @@ import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/pin/pin_data.dart';
 import 'package:mybank_app/features/pin/pin_widget.dart';
-import 'package:mybank_app/main.dart';
 
 class PinPage extends StatefulWidget {
   const PinPage({super.key});
@@ -216,14 +215,7 @@ class _PinPageState extends State<PinPage> {
     if (pinDefault == pin) {
       print('benar');
 
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) {
-            return MyHomePage(title: 'Flutter Demo Home Page');
-          },
-        ),
-      );
+      Navigator.pushNamed(context, '/home');
     } else {
       for (int i = 0; i < 6; i++) {
         clearPin();
