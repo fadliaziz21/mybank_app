@@ -81,33 +81,27 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
   }
 
   dashboardRecentTransactionTitle() {
-    return Container(
-      child: Padding(
-        padding: Styles.eiHorizontal20Vertical10,
-        child: Row(
-          children: [
-            Container(
-              child: const Text(
-                'Recent Transactions',
-                textAlign: TextAlign.left,
-                style: FontStyles.textDark18bold,
-              ),
+    return Padding(
+      padding: Styles.eiHorizontal20Vertical10,
+      child: Row(
+        children: [
+          const Text(
+            'Recent Transactions',
+            textAlign: TextAlign.left,
+            style: FontStyles.textDark18bold,
+          ),
+          const Spacer(),
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/transaction-history');
+            },
+            child: const Text(
+              'See All',
+              textAlign: TextAlign.right,
+              style: FontStyles.textDark14,
             ),
-            const Spacer(),
-            Container(
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, '/transaction-history');
-                },
-                child: const Text(
-                  'See All',
-                  textAlign: TextAlign.right,
-                  style: FontStyles.textDark14,
-                ),
-              ),
-            )
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

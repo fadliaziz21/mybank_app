@@ -96,20 +96,18 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Styles.eiAll7,
-      child: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Balance',
-              textAlign: TextAlign.left,
-              style: FontStyles.textDark14w500,
-            ),
-            savingsMenuBalanceInfo(),
-            savingsMenuCardInfo(),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'Balance',
+            textAlign: TextAlign.left,
+            style: FontStyles.textDark14w500,
+          ),
+          savingsMenuBalanceInfo(),
+          savingsMenuCardInfo(),
+        ],
       ),
     );
   }
@@ -140,23 +138,19 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
   }
 
   savingsMenuCardInfo() {
-    return Container(
-      child: Row(
-        children: [
-          Container(
-            child: Text(
-              cardName + ' - ',
-              textAlign: TextAlign.left,
-              style: FontStyles.textDark14,
-            ),
-          ),
-          Text(
-            accountNumber,
-            textAlign: TextAlign.left,
-            style: FontStyles.textDark14w500,
-          ),
-        ],
-      ),
+    return Row(
+      children: [
+        Text(
+          cardName + ' - ',
+          textAlign: TextAlign.left,
+          style: FontStyles.textDark14,
+        ),
+        Text(
+          accountNumber,
+          textAlign: TextAlign.left,
+          style: FontStyles.textDark14w500,
+        ),
+      ],
     );
   }
 }

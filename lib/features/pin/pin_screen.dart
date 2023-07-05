@@ -64,75 +64,73 @@ class _PinPageState extends State<PinPage> {
                 ),
               ),
               Styles.lineBreak25,
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        for (int i = 1; i <= 3; i++) ...[
-                          PinKeyNum(
-                            keyNum: i,
-                            onPressed: () {
-                              pinIndexSetup(i.toString());
-                            },
-                          ),
-                        ],
-                      ],
-                    ),
-                    Styles.lineBreak25,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        for (int i = 4; i <= 6; i++) ...[
-                          PinKeyNum(
-                            keyNum: i,
-                            onPressed: () {
-                              pinIndexSetup(i.toString());
-                            },
-                          ),
-                        ],
-                      ],
-                    ),
-                    Styles.lineBreak25,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        for (int i = 7; i <= 9; i++) ...[
-                          PinKeyNum(
-                            keyNum: i,
-                            onPressed: () {
-                              pinIndexSetup(i.toString());
-                            },
-                          ),
-                        ],
-                      ],
-                    ),
-                    Styles.lineBreak25,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        const SizedBox(
-                          height: 60.0,
-                          width: 60.0,
-                        ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      for (int i = 1; i <= 3; i++) ...[
                         PinKeyNum(
-                          keyNum: 0,
+                          keyNum: i,
                           onPressed: () {
-                            pinIndexSetup('0');
-                          },
-                        ),
-                        PinKeyIcon(
-                          iconName: Icons.backspace,
-                          onPressed: () {
-                            clearPin();
+                            pinIndexSetup(i.toString());
                           },
                         ),
                       ],
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                  Styles.lineBreak25,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      for (int i = 4; i <= 6; i++) ...[
+                        PinKeyNum(
+                          keyNum: i,
+                          onPressed: () {
+                            pinIndexSetup(i.toString());
+                          },
+                        ),
+                      ],
+                    ],
+                  ),
+                  Styles.lineBreak25,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      for (int i = 7; i <= 9; i++) ...[
+                        PinKeyNum(
+                          keyNum: i,
+                          onPressed: () {
+                            pinIndexSetup(i.toString());
+                          },
+                        ),
+                      ],
+                    ],
+                  ),
+                  Styles.lineBreak25,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const SizedBox(
+                        height: 60.0,
+                        width: 60.0,
+                      ),
+                      PinKeyNum(
+                        keyNum: 0,
+                        onPressed: () {
+                          pinIndexSetup('0');
+                        },
+                      ),
+                      PinKeyIcon(
+                        iconName: Icons.backspace,
+                        onPressed: () {
+                          clearPin();
+                        },
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
