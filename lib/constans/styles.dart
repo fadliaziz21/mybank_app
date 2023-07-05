@@ -45,6 +45,8 @@ class Styles {
   static const EdgeInsets eiLeft5 = EdgeInsets.only(left: 5.0);
 
   static const EdgeInsets eiTop3 = EdgeInsets.only(top: 3.0);
+  static const EdgeInsets eiTop20 = EdgeInsets.only(top: 20.0);
+  static const EdgeInsets eiTop25 = EdgeInsets.only(top: 25.0);
   static const EdgeInsets eiTop50 = EdgeInsets.only(top: 50.0);
 
   static const EdgeInsets eiRight5 = EdgeInsets.only(right: 5.0);
