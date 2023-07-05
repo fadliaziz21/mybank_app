@@ -6,7 +6,9 @@ class PinInput extends StatelessWidget {
   final TextEditingController textEditingController;
   final bool fieldPinCondition;
   const PinInput(
-      {required this.textEditingController, required this.fieldPinCondition});
+      {super.key,
+      required this.textEditingController,
+      required this.fieldPinCondition});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class PinInput extends StatelessWidget {
 class PinKeyNum extends StatelessWidget {
   final int keyNum;
   final Function() onPressed;
-  const PinKeyNum({required this.keyNum, required this.onPressed});
+  const PinKeyNum({super.key, required this.keyNum, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +69,8 @@ class PinKeyNum extends StatelessWidget {
 class PinKeyIcon extends StatelessWidget {
   final IconData iconName;
   final Function() onPressed;
-  const PinKeyIcon({required this.iconName, required this.onPressed});
+  const PinKeyIcon(
+      {super.key, required this.iconName, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

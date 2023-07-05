@@ -5,7 +5,8 @@ class DashboardMenu extends StatelessWidget {
   final String urlImage;
   final String menuName;
 
-  const DashboardMenu({required this.urlImage, required this.menuName});
+  const DashboardMenu(
+      {super.key, required this.urlImage, required this.menuName});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +60,7 @@ class DashboardMenu extends StatelessWidget {
 
 class DashboardSavingsMenuCard extends StatelessWidget {
   final String urlImage;
-  const DashboardSavingsMenuCard({required this.urlImage});
+  const DashboardSavingsMenuCard({super.key, required this.urlImage});
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +86,8 @@ class DashboardSavingsMenuInfo extends StatelessWidget {
   final String balance;
   final String accountNumber;
   const DashboardSavingsMenuInfo(
-      {required this.cardName,
+      {super.key,
+      required this.cardName,
       required this.balance,
       required this.accountNumber});
 

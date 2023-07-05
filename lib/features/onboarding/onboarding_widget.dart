@@ -7,7 +7,8 @@ class OnBoardPage extends StatelessWidget {
   final String title;
   final String subtitle;
   const OnBoardPage(
-      {required this.color,
+      {super.key,
+      required this.color,
       required this.urlImage,
       required this.title,
       required this.subtitle});
