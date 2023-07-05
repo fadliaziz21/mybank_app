@@ -79,7 +79,7 @@ class _DashboardPageState extends State<DashboardPage> {
       decoration: const BoxDecoration(
         borderRadius: Styles.borderRadTop25,
         boxShadow: [
-          Styles.smallBoxShadow,
+          Styles.boxShadowSmall,
         ],
       ),
       child: ClipRRect(

@@ -36,7 +36,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
         color: AppColors.primaryColor,
         borderRadius: Styles.borderRadBottom25,
         boxShadow: [
-          Styles.mediumBoxShadow,
+          Styles.boxShadowMedium,
         ],
       ),
       child: GridView.builder(
@@ -62,7 +62,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
           color: AppColors.whiteColor,
           borderRadius: Styles.borderRadCircular10,
           boxShadow: const [
-            Styles.smallBoxShadow,
+            Styles.boxShadowSmall,
           ],
         ),
         child: Row(

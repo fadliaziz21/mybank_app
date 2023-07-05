@@ -7,13 +7,13 @@ class Styles {
     height: 25.0,
   );
 
-  static const BoxShadow smallBoxShadow = BoxShadow(
+  static const BoxShadow boxShadowSmall = BoxShadow(
     color: AppColors.secondaryColor,
     spreadRadius: 1.0,
     blurRadius: 10.0,
     offset: Offset(0.0, 1.0),
   );
-  static const BoxShadow mediumBoxShadow = BoxShadow(
+  static const BoxShadow boxShadowMedium = BoxShadow(
     color: AppColors.secondaryColor,
     spreadRadius: 3.0,
     blurRadius: 15.0,

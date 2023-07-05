@@ -65,7 +65,7 @@ class DashboardSavingsMenuCard extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(
           boxShadow: [
-            Styles.smallBoxShadow,
+            Styles.boxShadowSmall,
           ],
         ),
         child: Image(
