@@ -77,13 +77,13 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget _buildBottomNavigationBar() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: Styles.topBorderRadius25,
+        borderRadius: Styles.borderRadTop25,
         boxShadow: [
           Styles.smallBoxShadow,
         ],
       ),
       child: ClipRRect(
-        borderRadius: Styles.topBorderRadius25,
+        borderRadius: Styles.borderRadTop25,
         child: BottomNavigationBar(
           currentIndex: selectedIndex,
           onTap: _onItemTapped,

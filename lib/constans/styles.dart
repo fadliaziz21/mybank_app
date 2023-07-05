@@ -20,13 +20,13 @@ class Styles {
     offset: Offset(0.0, 1.0),
   );
 
-  static BorderRadius allBorderRadiusCircular10 = BorderRadius.circular(10.0);
+  static BorderRadius borderRadCircular10 = BorderRadius.circular(10.0);
 
-  static const BorderRadius topBorderRadius25 = BorderRadius.only(
+  static const BorderRadius borderRadTop25 = BorderRadius.only(
     topLeft: Radius.circular(25.0),
     topRight: Radius.circular(25.0),
   );
-  static const BorderRadius bottomBorderRadius25 = BorderRadius.only(
+  static const BorderRadius borderRadBottom25 = BorderRadius.only(
     bottomLeft: Radius.circular(25.0),
     bottomRight: Radius.circular(25.0),
   );

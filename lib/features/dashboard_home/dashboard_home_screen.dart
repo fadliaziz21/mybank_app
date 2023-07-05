@@ -34,7 +34,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
       margin: Styles.eiBottom10,
       decoration: const BoxDecoration(
         color: AppColors.primaryColor,
-        borderRadius: Styles.bottomBorderRadius25,
+        borderRadius: Styles.borderRadBottom25,
         boxShadow: [
           Styles.mediumBoxShadow,
         ],
@@ -60,7 +60,7 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
         height: 100.0,
         decoration: BoxDecoration(
           color: AppColors.whiteColor,
-          borderRadius: Styles.allBorderRadiusCircular10,
+          borderRadius: Styles.borderRadCircular10,
           boxShadow: const [
             Styles.smallBoxShadow,
           ],

@@ -47,7 +47,8 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
             child: Column(
               children: [
                 Container(
-                  height: kToolbarHeight - 8.0,
+                  height: kToolbarHeight - 15.0,
+                  margin: Styles.eiTop50,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade200,
                     borderRadius: BorderRadius.circular(8.0),
@@ -85,6 +86,7 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
       backgroundColor: AppColors.primaryColor,
       shadowColor: AppColors.secondaryColor,
       toolbarHeight: 80.0,
+      leading: BackButton(color: AppColors.whiteColor),
       title: const Text(
         'Transaction History',
         style: FontStyles.textWhite,
