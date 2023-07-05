@@ -45,9 +45,9 @@ class PinKeyNum extends StatelessWidget {
     return Container(
       height: 60.0,
       width: 60.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.white24,
+        color: AppColors.whiteTransparentColor,
       ),
       alignment: Alignment.center,
       child: MaterialButton(
@@ -77,9 +77,9 @@ class PinKeyIcon extends StatelessWidget {
     return Container(
       height: 60.0,
       width: 60.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.white24,
+        color: AppColors.whiteTransparentColor,
       ),
       alignment: Alignment.center,
       child: MaterialButton(
