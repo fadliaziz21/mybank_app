@@ -78,7 +78,7 @@ class FontStyles {
   static const TextStyle textDark12 = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 12,
-    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.normal,
     color: AppColors.darkColor,
   );
 
@@ -113,6 +113,12 @@ class FontStyles {
     color: AppColors.darkColor,
   );
 
+  static const TextStyle textWhite11bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 11,
+    fontWeight: FontWeight.bold,
+    color: AppColors.whiteColor,
+  );
   static const TextStyle textWhite16 = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 16,
