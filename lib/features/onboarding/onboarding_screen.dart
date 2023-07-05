@@ -120,7 +120,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               MaterialStateProperty.all<Color>(AppColors.primaryColor),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25.0),
+              borderRadius: Styles.borderRadCircular25,
             ),
           ),
         ),

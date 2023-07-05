@@ -23,7 +23,7 @@ class PinInput extends StatelessWidget {
         decoration: InputDecoration(
           contentPadding: Styles.eiAll15,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: Styles.borderRadCircular10,
             borderSide: const BorderSide(color: Colors.transparent),
           ),
           filled: true,
@@ -53,7 +53,7 @@ class PinKeyNum extends StatelessWidget {
       child: MaterialButton(
         height: 60.0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(60.0),
+          borderRadius: Styles.borderRadCircular60,
         ),
         onPressed: onPressed,
         child: Text(
@@ -85,7 +85,7 @@ class PinKeyIcon extends StatelessWidget {
       child: MaterialButton(
         height: 60.0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(60.0),
+          borderRadius: Styles.borderRadCircular60,
         ),
         onPressed: onPressed,
         child: Icon(

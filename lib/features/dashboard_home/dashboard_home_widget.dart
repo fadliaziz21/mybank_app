@@ -20,18 +20,16 @@ class DashboardMenu extends StatelessWidget {
               Center(
                 child: Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(
-                      30.0,
-                    ),
+                    borderRadius: Styles.borderRadCircular30,
                   ),
                   elevation: 5,
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: Styles.eiAll10,
                     child: Image(
                       image: AssetImage(
                         urlImage,
                       ),
-                      height: 50,
+                      height: 50.0,
                     ),
                   ),
                 ),
