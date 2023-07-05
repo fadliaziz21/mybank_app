@@ -38,104 +38,117 @@ class _PinPageState extends State<PinPage> {
                 ),
               ),
               Styles.lineBreak25,
-              Container(
-                  child: isPinTrue
-                      ? const Text(
-                          'Enter your PIN code',
-                          style: FontStyles.textWhite16,
-                        )
-                      : const Text(
-                          'Your PIN incorrect. Please try again.',
-                          style: FontStyles.textWhite16,
-                        )),
+              pinInfoContainer(),
               Styles.lineBreak25,
-              Container(
-                padding: Styles.eiHorizontal50Vertical25,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    for (int i = 0; i < pinInputRowList.length; i++) ...[
-                      PinInput(
-                        textEditingController: pinInputRowList[i].inputCtrlr,
-                        fieldPinCondition: isPinTrue,
-                      ),
-                    ],
-                  ],
-                ),
-              ),
+              pinInputContainer(),
               Styles.lineBreak25,
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      for (int i = 1; i <= 3; i++) ...[
-                        PinKeyNum(
-                          keyNum: i,
-                          onPressed: () {
-                            pinIndexSetup(i.toString());
-                          },
-                        ),
-                      ],
-                    ],
-                  ),
-                  Styles.lineBreak25,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      for (int i = 4; i <= 6; i++) ...[
-                        PinKeyNum(
-                          keyNum: i,
-                          onPressed: () {
-                            pinIndexSetup(i.toString());
-                          },
-                        ),
-                      ],
-                    ],
-                  ),
-                  Styles.lineBreak25,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      for (int i = 7; i <= 9; i++) ...[
-                        PinKeyNum(
-                          keyNum: i,
-                          onPressed: () {
-                            pinIndexSetup(i.toString());
-                          },
-                        ),
-                      ],
-                    ],
-                  ),
-                  Styles.lineBreak25,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      const SizedBox(
-                        height: 60.0,
-                        width: 60.0,
-                      ),
-                      PinKeyNum(
-                        keyNum: 0,
-                        onPressed: () {
-                          pinIndexSetup('0');
-                        },
-                      ),
-                      PinKeyIcon(
-                        iconName: Icons.backspace,
-                        onPressed: () {
-                          clearPin();
-                        },
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              pinKeypadContainer(),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  pinInfoContainer() {
+    return Container(
+      child: isPinTrue
+          ? const Text(
+              'Enter your PIN code',
+              style: FontStyles.textWhite16,
+            )
+          : const Text(
+              'Your PIN incorrect. Please try again.',
+              style: FontStyles.textWhite16,
+            ),
+    );
+  }
+
+  pinInputContainer() {
+    return Container(
+      padding: Styles.eiHorizontal50Vertical25,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          for (int i = 0; i < pinInputRowList.length; i++) ...[
+            PinInput(
+              textEditingController: pinInputRowList[i].inputCtrlr,
+              fieldPinCondition: isPinTrue,
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  pinKeypadContainer() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            for (int i = 1; i <= 3; i++) ...[
+              PinKeyNum(
+                keyNum: i,
+                onPressed: () {
+                  pinIndexSetup(i.toString());
+                },
+              ),
+            ],
+          ],
+        ),
+        Styles.lineBreak25,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            for (int i = 4; i <= 6; i++) ...[
+              PinKeyNum(
+                keyNum: i,
+                onPressed: () {
+                  pinIndexSetup(i.toString());
+                },
+              ),
+            ],
+          ],
+        ),
+        Styles.lineBreak25,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            for (int i = 7; i <= 9; i++) ...[
+              PinKeyNum(
+                keyNum: i,
+                onPressed: () {
+                  pinIndexSetup(i.toString());
+                },
+              ),
+            ],
+          ],
+        ),
+        Styles.lineBreak25,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const SizedBox(
+              height: 60.0,
+              width: 60.0,
+            ),
+            PinKeyNum(
+              keyNum: 0,
+              onPressed: () {
+                pinIndexSetup('0');
+              },
+            ),
+            PinKeyIcon(
+              iconName: Icons.backspace,
+              onPressed: () {
+                clearPin();
+              },
+            ),
+          ],
+        ),
+      ],
     );
   }
 
