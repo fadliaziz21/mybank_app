@@ -29,8 +29,8 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        child: _buildAppBar(),
         preferredSize: const Size.fromHeight(80.0),
+        child: _buildAppBar(),
       ),
       body: SafeArea(
         child: _buildBody(),
