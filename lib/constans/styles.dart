@@ -21,6 +21,9 @@ class Styles {
   );
 
   static BorderRadius borderRadCircular10 = BorderRadius.circular(10.0);
+  static BorderRadius borderRadCircular25 = BorderRadius.circular(25.0);
+  static BorderRadius borderRadCircular30 = BorderRadius.circular(30.0);
+  static BorderRadius borderRadCircular60 = BorderRadius.circular(60.0);
 
   static const BorderRadius borderRadTop25 = BorderRadius.only(
     topLeft: Radius.circular(25.0),
@@ -32,6 +35,7 @@ class Styles {
   );
 
   static const EdgeInsets eiAll7 = EdgeInsets.all(7.0);
+  static const EdgeInsets eiAll10 = EdgeInsets.all(10.0);
   static const EdgeInsets eiAll15 = EdgeInsets.all(15.0);
   static const EdgeInsets eiAll25 = EdgeInsets.all(25.0);
 
