@@ -90,7 +90,10 @@ flutter:
     - assets/icons/footer_icon/ic_footer-history.png
     - assets/icons/footer_icon/ic_footer-home.png
     - assets/icons/footer_icon/ic_footer-profile.png
-
+    
+    - assets/icons/transaction_icon/ic_transaction-receive.png
+    - assets/icons/transaction_icon/ic_transaction-send.png
+    - assets/icons/transaction_icon/ic_transaction-bill.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
