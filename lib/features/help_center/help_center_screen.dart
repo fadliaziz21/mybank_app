@@ -65,13 +65,13 @@ class _HelpCenterPageState extends State<HelpCenterPage> {
           hintText: 'Which feature do you need help?',
           hintStyle: FontStyles.textLightGrey14,
           prefixIcon: IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             iconSize: 20.0,
             color: AppColors.lightGreyColor,
             onPressed: () {},
           ),
           suffixIcon: IconButton(
-            icon: Icon(Icons.clear),
+            icon: const Icon(Icons.clear),
             iconSize: 20.0,
             color: AppColors.lightGreyColor,
             onPressed: () {
