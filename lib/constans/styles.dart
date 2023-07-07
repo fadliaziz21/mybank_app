@@ -37,6 +37,7 @@ class Styles {
   static const EdgeInsets eiAll7 = EdgeInsets.all(7.0);
   static const EdgeInsets eiAll10 = EdgeInsets.all(10.0);
   static const EdgeInsets eiAll15 = EdgeInsets.all(15.0);
+  static const EdgeInsets eiAll20 = EdgeInsets.all(20.0);
   static const EdgeInsets eiAll25 = EdgeInsets.all(25.0);
 
   static const EdgeInsets eiAll10Top20 =
@@ -74,6 +75,12 @@ class FontStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.primaryColor,
   );
+  static const TextStyle textPrimary18bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryColor,
+  );
   static const TextStyle textPrimary28bold = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 28,
@@ -81,10 +88,23 @@ class FontStyles {
     color: AppColors.primaryColor,
   );
 
+  static const TextStyle textDanger18bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: AppColors.dangerColor,
+  );
+
   static const TextStyle textDark12 = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 12,
     fontWeight: FontWeight.normal,
+    color: AppColors.darkColor,
+  );
+  static const TextStyle textDark12w500 = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
     color: AppColors.darkColor,
   );
 
