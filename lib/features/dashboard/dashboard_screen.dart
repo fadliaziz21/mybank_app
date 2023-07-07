@@ -18,6 +18,8 @@ class _DashboardPageState extends State<DashboardPage> {
   void _onItemTapped(int index) {
     if (index == 1) {
       Navigator.pushNamed(context, '/transaction-history');
+    } else if (index == 2) {
+      Navigator.pushNamed(context, '/help-center');
     } else {
       setState(() {
         selectedIndex = index;
@@ -41,6 +43,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
   Widget _buildAppBar() {
     return AppBar(
+      automaticallyImplyLeading: false,
       backgroundColor: AppColors.primaryColor,
       shadowColor: AppColors.secondaryColor,
       toolbarHeight: 80.0,
@@ -67,8 +70,8 @@ class _DashboardPageState extends State<DashboardPage> {
         return const DashboardHomePage();
       // case 1:
       //   return const Center(child: Text('Search'));
-      case 2:
-        return const Center(child: Text('Account'));
+      // case 2:
+      //   return const Center(child: Text('Account'));
       default:
         return const Center(child: Text('Default'));
     }
