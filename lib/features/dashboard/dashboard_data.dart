@@ -11,7 +11,7 @@ List dashboardFooterList = [
   ),
   _DashboardFooterItem(
     Assets.dashboardFooterImg[3],
-    'Call Center',
+    'Help Center',
   ),
   _DashboardFooterItem(
     Assets.dashboardFooterImg[4],
