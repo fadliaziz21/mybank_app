@@ -68,7 +68,7 @@ class HelpCenterDetailList extends StatelessWidget {
           ),
           // Spacer(),
           IconButton(
-            icon: Icon(Icons.arrow_forward_ios),
+            icon: const Icon(Icons.arrow_forward_ios),
             iconSize: 20.0,
             color: AppColors.lightGreyColor,
             onPressed: () {},
