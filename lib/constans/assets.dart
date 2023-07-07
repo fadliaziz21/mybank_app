@@ -32,4 +32,10 @@ class Assets {
     3: 'assets/images/debit_card/mybank_dc-platinum.png',
     4: 'assets/images/debit_card/mybank_dc-platinumpriority.png',
   };
+
+  static const Map<int, dynamic> transactionImg = {
+    1: 'assets/icons/transaction_icon/ic_transaction-receive.png',
+    2: 'assets/icons/transaction_icon/ic_transaction-send.png',
+    3: 'assets/icons/transaction_icon/ic_transaction-bill.png',
+  };
 }
