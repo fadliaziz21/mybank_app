@@ -19,4 +19,22 @@ class AppData {
       'cardImage': Assets.savingsCardImg[4],
     },
   };
+
+  static Map<int, dynamic> transactionType = {
+    1: {
+      'transactionType': 'income',
+      'transactionImage': Assets.transactionImg[1],
+      'transactionName': 'Transfer',
+    },
+    2: {
+      'transactionType': 'outcome',
+      'transactionImage': Assets.transactionImg[2],
+      'transactionName': 'Transfer',
+    },
+    3: {
+      'transactionType': 'outcome',
+      'transactionImage': Assets.transactionImg[3],
+      'transactionName': 'Paymen',
+    },
+  };
 }
