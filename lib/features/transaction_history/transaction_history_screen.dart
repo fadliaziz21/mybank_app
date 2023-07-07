@@ -89,13 +89,11 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
                 controller: _tabController,
                 children: [
                   Container(
-                    padding: Styles.eiHorizontal20Vertical10,
-                    margin: Styles.eiAll10,
+                    margin: Styles.eiTop20,
                     child: transactionTabList('income', 0),
                   ),
                   Container(
-                    padding: Styles.eiHorizontal20Vertical10,
-                    margin: Styles.eiAll10,
+                    margin: Styles.eiTop20,
                     child: transactionTabList('outcome', 0),
                   ),
                 ],
