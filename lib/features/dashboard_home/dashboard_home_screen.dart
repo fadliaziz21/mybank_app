@@ -3,6 +3,8 @@ import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_data.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_widget.dart';
+import 'package:mybank_app/features/transaction_history/transaction_history_data.dart';
+import 'package:mybank_app/features/transaction_history/transaction_history_widget.dart';
 
 class DashboardHomePage extends StatefulWidget {
   const DashboardHomePage({super.key});
@@ -20,7 +22,8 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
           children: [
             homeContainer(),
             savingsContainer(),
-            recentTransactionTitleContainer()
+            recentTransactionTitleContainer(),
+            recentTransactionListContainer()
           ],
         ),
       ),
@@ -104,5 +107,21 @@ class _DashboardHomePageState extends State<DashboardHomePage> {
         ],
       ),
     );
+  }
+
+  recentTransactionListContainer() {
+    return ListView.builder(
+        shrinkWrap: true,
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          return TransactionList(
+            urlImage: transactionHistoryList[index]['urlImage'],
+            transactionType: transactionHistoryList[index]['transactionType'],
+            transactionName: transactionHistoryList[index]['transactionName'],
+            transactionDate: transactionHistoryList[index]['transactionDate'],
+            transactionAmount: transactionHistoryList[index]
+                ['transactionAmount'],
+          );
+        });
   }
 }
