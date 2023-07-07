@@ -128,7 +128,7 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
             transactionType: transactionList[index]['transactionType'],
             transactionName: transactionList[index]['transactionName'],
             transactionDate: transactionList[index]['transactionDate'],
-            transactionAmount: transactionList[index]['transactionDate'],
+            transactionAmount: transactionList[index]['transactionAmount'],
           );
         });
   }
