@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
+import 'package:mybank_app/features/transaction_history/transaction_history_data.dart';
 import 'package:mybank_app/features/transaction_history/transaction_history_widget.dart';
 
 class TransactionHistoryPage extends StatefulWidget {
@@ -33,8 +34,8 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
       initialIndex: 0,
       child: Scaffold(
         appBar: PreferredSize(
-          child: _buildAppBar(),
           preferredSize: const Size.fromHeight(80.0),
+          child: _buildAppBar(),
         ),
         body: _buildBody(),
       ),
@@ -46,7 +47,7 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
       backgroundColor: AppColors.primaryColor,
       shadowColor: AppColors.secondaryColor,
       toolbarHeight: 80.0,
-      leading: BackButton(color: AppColors.whiteColor),
+      leading: const BackButton(color: AppColors.whiteColor),
       title: const Text(
         'Transaction History',
         style: FontStyles.textWhite,
@@ -69,11 +70,11 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
                 ),
                 indicatorSize: TabBarIndicatorSize.label,
                 controller: _tabController,
-                padding: EdgeInsets.symmetric(horizontal: 35.0),
+                padding: const EdgeInsets.symmetric(horizontal: 35.0),
                 labelColor: AppColors.whiteColor,
                 unselectedLabelColor: AppColors.primaryColor,
                 dividerColor: Colors.transparent,
-                tabs: [
+                tabs: const [
                   TransactionHistoryTabBar(
                     labelName: 'Income',
                   ),
@@ -87,10 +88,16 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
               child: TabBarView(
                 controller: _tabController,
                 children: [
-                  Text(
-                    'Tab 1',
+                  Container(
+                    padding: Styles.eiHorizontal20Vertical10,
+                    margin: Styles.eiAll10,
+                    child: transactionTabList('income', 0),
                   ),
-                  Text('Tab 2'),
+                  Container(
+                    padding: Styles.eiHorizontal20Vertical10,
+                    margin: Styles.eiAll10,
+                    child: transactionTabList('outcome', 0),
+                  ),
                 ],
               ),
             ),
@@ -98,5 +105,31 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
         ),
       ),
     );
+  }
+
+  transactionTabList(transactionType, limit) {
+    int transactionListLength;
+    List<Map<String, dynamic>> transactionList = transactionHistoryList;
+    if (transactionType == 'allLimit') {
+      transactionListLength = limit;
+    } else {
+      transactionList = transactionHistoryList
+          .where((map) => map['transactionType'].contains(transactionType))
+          .toList();
+      transactionListLength = transactionList.length;
+    }
+
+    return ListView.builder(
+        shrinkWrap: true,
+        itemCount: transactionListLength,
+        itemBuilder: (context, index) {
+          return TransactionList(
+            urlImage: transactionList[index]['urlImage'],
+            transactionType: transactionList[index]['transactionType'],
+            transactionName: transactionList[index]['transactionName'],
+            transactionDate: transactionList[index]['transactionDate'],
+            transactionAmount: transactionList[index]['transactionDate'],
+          );
+        });
   }
 }
