@@ -46,7 +46,7 @@ class TransactionList extends StatelessWidget {
     return Padding(
       padding: Styles.eiHorizontal20Vertical10,
       child: Container(
-        height: 75.0,
+        height: 85.0,
         decoration: BoxDecoration(
           color: AppColors.whiteColor,
           borderRadius: Styles.borderRadCircular10,
