@@ -3,6 +3,9 @@ import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/font_family.dart';
 
 class Styles {
+  static const SizedBox lineBreak15 = SizedBox(
+    height: 15.0,
+  );
   static const SizedBox lineBreak25 = SizedBox(
     height: 25.0,
   );
@@ -20,14 +23,43 @@ class Styles {
     offset: Offset(0.0, 1.0),
   );
 
+  static Decoration decorationBorderLightGreyW1 = BoxDecoration(
+    border: Border.all(
+      color: AppColors.lightGreyColor,
+      width: 1.0,
+    ),
+  );
+  static Decoration decorationTop15BorderLightGreyW1 = BoxDecoration(
+    borderRadius: borderRadTop15,
+    border: Border.all(
+      color: AppColors.lightGreyColor,
+      width: 1.0,
+    ),
+  );
+  static Decoration decorationBottom15BorderLightGreyW1 = BoxDecoration(
+    borderRadius: borderRadBottom15,
+    border: Border.all(
+      color: AppColors.lightGreyColor,
+      width: 1.0,
+    ),
+  );
   static BorderRadius borderRadCircular10 = BorderRadius.circular(10.0);
   static BorderRadius borderRadCircular25 = BorderRadius.circular(25.0);
   static BorderRadius borderRadCircular30 = BorderRadius.circular(30.0);
   static BorderRadius borderRadCircular60 = BorderRadius.circular(60.0);
 
+  static const BorderRadius borderRadTop15 = BorderRadius.only(
+    topLeft: Radius.circular(15.0),
+    topRight: Radius.circular(15.0),
+  );
   static const BorderRadius borderRadTop25 = BorderRadius.only(
     topLeft: Radius.circular(25.0),
     topRight: Radius.circular(25.0),
+  );
+
+  static const BorderRadius borderRadBottom15 = BorderRadius.only(
+    bottomLeft: Radius.circular(15.0),
+    bottomRight: Radius.circular(15.0),
   );
   static const BorderRadius borderRadBottom25 = BorderRadius.only(
     bottomLeft: Radius.circular(25.0),
@@ -46,6 +78,7 @@ class Styles {
   static const EdgeInsets eiLeft5 = EdgeInsets.only(left: 5.0);
 
   static const EdgeInsets eiTop3 = EdgeInsets.only(top: 3.0);
+  static const EdgeInsets eiTop10 = EdgeInsets.only(top: 10.0);
   static const EdgeInsets eiTop20 = EdgeInsets.only(top: 20.0);
   static const EdgeInsets eiTop25 = EdgeInsets.only(top: 25.0);
   static const EdgeInsets eiTop50 = EdgeInsets.only(top: 50.0);
@@ -56,6 +89,8 @@ class Styles {
   static const EdgeInsets eiBottom35 = EdgeInsets.only(bottom: 35.0);
   static const EdgeInsets eiBottom60 = EdgeInsets.only(bottom: 60.0);
 
+  static const EdgeInsets eiHorizontal10Vertical5 =
+      EdgeInsets.only(left: 10.0, top: 5.0, right: 10.0, bottom: 5.0);
   static const EdgeInsets eiHorizontal20Vertical10 =
       EdgeInsets.only(left: 20.0, top: 10.0, right: 20.0, bottom: 10.0);
   static const EdgeInsets eiHorizontal50Vertical25 =
@@ -126,6 +161,12 @@ class FontStyles {
     fontWeight: FontWeight.normal,
     color: AppColors.darkColor,
   );
+  static const TextStyle textDark16bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: AppColors.darkColor,
+  );
   static const TextStyle textDark18bold = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 18,
@@ -156,5 +197,12 @@ class FontStyles {
     fontSize: 18,
     fontWeight: FontWeight.bold,
     color: AppColors.whiteColor,
+  );
+
+  static const TextStyle textLightGrey14 = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: AppColors.lightGreyColor,
   );
 }
