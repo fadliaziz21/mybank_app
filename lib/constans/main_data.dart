@@ -34,7 +34,7 @@ class AppData {
     3: {
       'transactionType': 'outcome',
       'transactionImage': Assets.transactionImg[3],
-      'transactionName': 'Paymen',
+      'transactionName': 'Payment',
     },
   };
 }
