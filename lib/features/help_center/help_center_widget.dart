@@ -52,12 +52,15 @@ class HelpCenterDetailList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: Styles.eiHorizontal10Vertical5,
-      decoration: index == 0
-          ? Styles.decorationTop15BorderLightGreyW1
-          : index == topicListLength - 1
-              ? Styles.decorationBottom15BorderLightGreyW1
-              : Styles.decorationBorderLightGreyW1,
+      decoration: index == 0 && index == topicListLength - 1
+          ? Styles.decorationAll15BorderLightGreyW1
+          : index == 0
+              ? Styles.decorationTop15BorderLightGreyW1
+              : index == topicListLength - 1
+                  ? Styles.decorationBottom15BorderLightGreyW1
+                  : Styles.decorationBorderLightGreyW1,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Flexible(
             child: Text(
