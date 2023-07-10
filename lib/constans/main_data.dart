@@ -37,4 +37,15 @@ class AppData {
       'transactionName': 'Payment',
     },
   };
+
+  static List<Map<String, dynamic>> accountInformation = [
+    {
+      'accountName': 'John Doe',
+      'accountNumber': '1234567890',
+      'cardType': {
+        'cardImage': cardType[1]['cardImage'],
+        'cardName': cardType[1]['cardName'],
+      },
+    },
+  ];
 }
