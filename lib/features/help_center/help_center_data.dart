@@ -35,5 +35,13 @@ List<Map<String, dynamic>> helpCenterList = [
         'topicName': 'How do I contact MyBank call center?',
       },
     ]
+  },
+  {
+    'topicTitle': 'Test',
+    'topicList': [
+      {
+        'topicName': 'Test',
+      },
+    ]
   }
 ];
