@@ -12,18 +12,25 @@ class Styles {
 
   static const BoxShadow boxShadowSmall = BoxShadow(
     color: AppColors.secondaryColor,
-    spreadRadius: 1.0,
-    blurRadius: 10.0,
+    spreadRadius: 0.0,
+    blurRadius: 5.0,
     offset: Offset(0.0, 1.0),
   );
   static const BoxShadow boxShadowMedium = BoxShadow(
     color: AppColors.secondaryColor,
-    spreadRadius: 3.0,
-    blurRadius: 15.0,
+    spreadRadius: 1.0,
+    blurRadius: 10.0,
     offset: Offset(0.0, 1.0),
   );
 
   static Decoration decorationBorderLightGreyW1 = BoxDecoration(
+    border: Border.all(
+      color: AppColors.lightGreyColor,
+      width: 1.0,
+    ),
+  );
+  static Decoration decorationAll15BorderLightGreyW1 = BoxDecoration(
+    borderRadius: borderRadCircular15,
     border: Border.all(
       color: AppColors.lightGreyColor,
       width: 1.0,
@@ -44,6 +51,7 @@ class Styles {
     ),
   );
   static BorderRadius borderRadCircular10 = BorderRadius.circular(10.0);
+  static BorderRadius borderRadCircular15 = BorderRadius.circular(15.0);
   static BorderRadius borderRadCircular25 = BorderRadius.circular(25.0);
   static BorderRadius borderRadCircular30 = BorderRadius.circular(30.0);
   static BorderRadius borderRadCircular60 = BorderRadius.circular(60.0);
