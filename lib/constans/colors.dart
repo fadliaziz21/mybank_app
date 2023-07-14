@@ -7,5 +7,6 @@ class AppColors {
   static const Color lightGreyColor = Color.fromARGB(255, 189, 189, 189);
   static const Color secondaryColor = Color.fromARGB(255, 66, 66, 66);
   static const Color whiteColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color whiteSmokeColor = Color.fromARGB(255, 245, 245, 245);
   static const Color whiteTransparentColor = Color.fromARGB(61, 255, 255, 255);
 }
