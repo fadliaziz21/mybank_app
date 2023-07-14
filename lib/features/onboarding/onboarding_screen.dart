@@ -111,8 +111,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
   onBoardingGetStartedContainer() {
     return Container(
-      height: 50.0,
       width: 250.0,
+      height: 50.0,
       margin: Styles.eiBottom35,
       child: TextButton(
         style: ButtonStyle(
