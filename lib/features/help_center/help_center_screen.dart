@@ -18,6 +18,7 @@ class _HelpCenterPageState extends State<HelpCenterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteSmokeColor,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(80.0),
         child: _buildAppBar(),

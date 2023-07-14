@@ -33,6 +33,7 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
       length: 2,
       initialIndex: 0,
       child: Scaffold(
+        backgroundColor: AppColors.whiteSmokeColor,
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(80.0),
           child: _buildAppBar(),
