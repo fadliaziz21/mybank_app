@@ -11,7 +11,7 @@ class DashboardMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 50,
+      width: 50.0,
       child: InkWell(
         onTap: () {},
         child: Center(

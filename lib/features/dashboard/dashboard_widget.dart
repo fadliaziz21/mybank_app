@@ -10,9 +10,9 @@ class DashboardAppBar extends StatelessWidget {
     return AppBar(
       backgroundColor: AppColors.primaryColor,
       shadowColor: AppColors.darkColor,
-      toolbarHeight: 80,
+      toolbarHeight: 80.0,
       title: Container(
-        width: 40,
+        width: 40.0,
         child: Image.asset(Assets.myBankIcon),
       ),
       actions: [
@@ -20,7 +20,7 @@ class DashboardAppBar extends StatelessWidget {
           icon: const Icon(
             Icons.notifications,
             color: AppColors.whiteColor,
-            size: 30,
+            size: 30.0,
           ),
           onPressed: () {},
         ),

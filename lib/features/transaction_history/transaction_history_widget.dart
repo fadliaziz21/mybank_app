@@ -14,7 +14,7 @@ class TransactionHistoryTabBar extends StatelessWidget {
           borderRadius: BorderRadius.circular(35.0),
           border: Border.all(
             color: AppColors.primaryColor,
-            width: 1,
+            width: 1.0,
           ),
         ),
         child: Align(
