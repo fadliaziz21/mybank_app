@@ -65,8 +65,8 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
               margin: Styles.eiTop25,
               child: TabBar(
                 indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35.0),
                   color: AppColors.primaryColor,
+                  borderRadius: BorderRadius.circular(35.0),
                 ),
                 indicatorSize: TabBarIndicatorSize.label,
                 controller: _tabController,

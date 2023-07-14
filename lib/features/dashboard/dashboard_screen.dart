@@ -89,8 +89,8 @@ class _DashboardPageState extends State<DashboardPage> {
               label: dashboardFooterList[3].labelName,
             ),
           ],
-          unselectedItemColor: Colors.grey.shade600,
           selectedItemColor: AppColors.primaryColor,
+          unselectedItemColor: Colors.grey.shade600,
         ),
       ),
     );
