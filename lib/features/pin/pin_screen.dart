@@ -22,8 +22,8 @@ class _PinPageState extends State<PinPage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          height: double.infinity,
           width: double.infinity,
+          height: double.infinity,
           decoration: const BoxDecoration(
             color: AppColors.primaryColor,
           ),
@@ -34,7 +34,7 @@ class _PinPageState extends State<PinPage> {
                 margin: Styles.eiTop50,
                 child: Image.asset(
                   Assets.myBankLogo,
-                  height: 25,
+                  height: 25.0,
                 ),
               ),
               Styles.lineBreak25,
@@ -131,8 +131,8 @@ class _PinPageState extends State<PinPage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const SizedBox(
-              height: 60.0,
               width: 60.0,
+              height: 60.0,
             ),
             PinKeyNum(
               keyNum: 0,
