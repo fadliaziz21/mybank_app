@@ -1,6 +1,8 @@
 class Assets {
   static const String myBankIcon = 'assets/logos/mybank-logo_icon-white.png';
   static const String myBankLogo = 'assets/logos/mybank-logo_full-white.png';
+  static const String myBankProfile =
+      'assets/images/profile_picture/mybank_profilepicture.jpg';
 
   static const Map<int, dynamic> onboardingImg = {
     1: 'assets/images/onboarding/mybank_onboarding-1.png',
