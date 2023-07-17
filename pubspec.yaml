@@ -68,6 +68,8 @@ flutter:
     - assets/logos/mybank-logo_full-white.png
     - assets/logos/mybank-logo_icon-white.png
 
+    - assets/images/profile_picture/mybank_profilepicture.jpg
+
     - assets/images/onboarding/mybank_onboarding-1.png
     - assets/images/onboarding/mybank_onboarding-2.png
     - assets/images/onboarding/mybank_onboarding-3.png
