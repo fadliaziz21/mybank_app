@@ -36,14 +36,7 @@ List dashboardMenuList = [
   ),
 ];
 
-Map<String, dynamic> dashboardSavingsMenuList = {
-  'cardType': {
-    'cardImage': AppData.cardType[1]['cardImage'],
-    'cardName': AppData.cardType[1]['cardName'],
-  },
-  'balance': '9.876.543,18',
-  'accountNumber': '1234567890',
-};
+Map<String, dynamic> dashboardSavingsMenuList = AppData.accountInformation[0];
 
 class _DashboardMenuItem {
   final String urlImage;
