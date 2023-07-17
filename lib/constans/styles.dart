@@ -24,12 +24,14 @@ class Styles {
   );
 
   static Decoration decorationBorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
     border: Border.all(
       color: AppColors.lightGreyColor,
       width: 1.0,
     ),
   );
   static Decoration decorationAll15BorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
     borderRadius: borderRadCircular15,
     border: Border.all(
       color: AppColors.lightGreyColor,
@@ -37,6 +39,7 @@ class Styles {
     ),
   );
   static Decoration decorationTop15BorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
     borderRadius: borderRadTop15,
     border: Border.all(
       color: AppColors.lightGreyColor,
@@ -44,17 +47,20 @@ class Styles {
     ),
   );
   static Decoration decorationBottom15BorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
     borderRadius: borderRadBottom15,
     border: Border.all(
       color: AppColors.lightGreyColor,
       width: 1.0,
     ),
   );
+
   static BorderRadius borderRadCircular10 = BorderRadius.circular(10.0);
   static BorderRadius borderRadCircular15 = BorderRadius.circular(15.0);
   static BorderRadius borderRadCircular25 = BorderRadius.circular(25.0);
   static BorderRadius borderRadCircular30 = BorderRadius.circular(30.0);
   static BorderRadius borderRadCircular60 = BorderRadius.circular(60.0);
+  static BorderRadius borderRadCircular65 = BorderRadius.circular(65.0);
 
   static const BorderRadius borderRadTop15 = BorderRadius.only(
     topLeft: Radius.circular(15.0),
@@ -74,6 +80,7 @@ class Styles {
     bottomRight: Radius.circular(25.0),
   );
 
+  static const EdgeInsets eiAll5 = EdgeInsets.all(5.0);
   static const EdgeInsets eiAll7 = EdgeInsets.all(7.0);
   static const EdgeInsets eiAll10 = EdgeInsets.all(10.0);
   static const EdgeInsets eiAll15 = EdgeInsets.all(15.0);
@@ -161,6 +168,12 @@ class FontStyles {
     fontFamily: FontFamily.montserrat,
     fontSize: 14,
     fontWeight: FontWeight.w500,
+    color: AppColors.darkColor,
+  );
+  static const TextStyle textDark14bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
     color: AppColors.darkColor,
   );
   static const TextStyle textDark16 = TextStyle(
