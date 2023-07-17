@@ -40,8 +40,10 @@ class AppData {
 
   static List<Map<String, dynamic>> accountInformation = [
     {
-      'accountName': 'John Doe',
+      'accountName': 'Roberto Downey Yanuar',
       'accountNumber': '1234567890',
+      'accountStatus': 'Basic',
+      'balance': '9.876.543,18',
       'cardType': {
         'cardImage': cardType[1]['cardImage'],
         'cardName': cardType[1]['cardName'],
