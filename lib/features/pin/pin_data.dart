@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mybank_app/features/pin/models/pin_models.dart';
 
 TextEditingController pinOneCtrlr = TextEditingController();
 TextEditingController pinTwoCtrlr = TextEditingController();
@@ -8,17 +9,10 @@ TextEditingController pinFiveCtrlr = TextEditingController();
 TextEditingController pinSixCtrlr = TextEditingController();
 
 List pinInputRowList = [
-  _PinInputRowItem(1, pinOneCtrlr),
-  _PinInputRowItem(2, pinTwoCtrlr),
-  _PinInputRowItem(3, pinThreeCtrlr),
-  _PinInputRowItem(4, pinFourCtrlr),
-  _PinInputRowItem(5, pinFiveCtrlr),
-  _PinInputRowItem(6, pinSixCtrlr),
+  PinInputRowItem(1, pinOneCtrlr),
+  PinInputRowItem(2, pinTwoCtrlr),
+  PinInputRowItem(3, pinThreeCtrlr),
+  PinInputRowItem(4, pinFourCtrlr),
+  PinInputRowItem(5, pinFiveCtrlr),
+  PinInputRowItem(6, pinSixCtrlr),
 ];
-
-class _PinInputRowItem {
-  final int row;
-  final TextEditingController inputCtrlr;
-
-  _PinInputRowItem(this.row, this.inputCtrlr);
-}

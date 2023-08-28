@@ -1,27 +1,21 @@
 import 'package:mybank_app/constans/assets.dart';
+import 'package:mybank_app/features/dashboard/models/dashboard_models.dart';
 
 List dashboardFooterList = [
-  _DashboardFooterItem(
+  DashboardFooterItem(
     Assets.dashboardFooterImg[1],
     'Home',
   ),
-  _DashboardFooterItem(
+  DashboardFooterItem(
     Assets.dashboardFooterImg[2],
     'History',
   ),
-  _DashboardFooterItem(
+  DashboardFooterItem(
     Assets.dashboardFooterImg[3],
     'Help Center',
   ),
-  _DashboardFooterItem(
+  DashboardFooterItem(
     Assets.dashboardFooterImg[4],
     'Profile',
   ),
 ];
-
-class _DashboardFooterItem {
-  final String urlImage;
-  final String labelName;
-
-  _DashboardFooterItem(this.urlImage, this.labelName);
-}
