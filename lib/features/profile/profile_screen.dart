@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mybank_app/constans/assets.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/profile/profile_data.dart';
+import 'package:mybank_app/features/profile/widget/profile_widget.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -28,70 +28,27 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: Styles.eiHorizontal20Vertical10,
         child: Column(
           children: [
-            profilePictPremiumContainer(),
+            profilePictContainer(),
             accountInfoContainer(),
-            upgradeAccountContainer(),
+            profileListContainer(),
           ],
         ),
       ),
     );
   }
 
-  profilePictPremiumContainer() {
-    return Center(
-      child: Stack(
-        children: [
-          Container(
-            width: 135.0,
-            height: 135.0,
-            margin: Styles.eiTop25,
-            decoration: BoxDecoration(
-              color: AppColors.primaryColor,
-              shape: BoxShape.circle,
-            ),
-            padding: Styles.eiAll5,
-            child: ClipOval(
-              child: Container(
-                width: 250.0,
-                height: 250.0,
-                child: Image.asset(
-                  Assets.myBankProfile,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 105.0,
-            left: 105.0,
-            right: 0.0,
-            child: Center(
-              child: CircleAvatar(
-                backgroundColor: Colors.green,
-                radius: 30.0,
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
   profilePictContainer() {
     return Center(
-      child: Container(
-        width: 130.0,
-        height: 130.0,
-        margin: Styles.eiTop25,
-        decoration: BoxDecoration(
-          color: AppColors.primaryColor,
-          shape: BoxShape.circle,
+        child: Column(
+      children: [
+        ProfilePicture(
+          urlImage: accountInfoList['profilePicture'],
+          accountStatus: accountInfoList['accountStatus'],
         ),
-        child: CircleAvatar(
-          backgroundImage: AssetImage(Assets.myBankProfile),
-        ),
-      ),
-    );
+        if (accountInfoList['accountStatus'] == 'Basic')
+          upgradeAccountContainer()
+      ],
+    ));
   }
 
   accountInfoContainer() {
@@ -116,7 +73,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return Container(
       width: 200.0,
       height: 40.0,
-      margin: Styles.eiTop10,
+      margin: Styles.eiTop20,
       child: TextButton(
         style: ButtonStyle(
           backgroundColor:
@@ -131,6 +88,61 @@ class _ProfilePageState extends State<ProfilePage> {
         child: const Text(
           'Upgrade to Premium',
           style: FontStyles.textWhite,
+        ),
+      ),
+    );
+  }
+
+  profileListContainer() {
+    return Padding(
+      padding: Styles.eiAll10,
+      child: Container(
+        margin: Styles.eiTop10,
+        padding: Styles.eiAll5,
+        decoration: BoxDecoration(
+          color: AppColors.whiteColor,
+          borderRadius: Styles.borderRadCircular15,
+          border: Border.all(
+            color: AppColors.lightGreyColor,
+            width: 1.0,
+          ),
+        ),
+        child: Row(
+          children: [
+            Padding(
+              padding: Styles.eiAll5,
+              child: Icon(
+                Icons.verified,
+                color: AppColors.primaryColor,
+                size: 30.0,
+              ),
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: Styles.eiAll7,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'transactionName',
+                        textAlign: TextAlign.left,
+                        style: FontStyles.textDark14w500,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Spacer(),
+            IconButton(
+              icon: const Icon(Icons.arrow_forward_ios),
+              iconSize: 20.0,
+              color: AppColors.lightGreyColor,
+              onPressed: () {},
+            ),
+          ],
         ),
       ),
     );
