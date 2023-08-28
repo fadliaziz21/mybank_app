@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 
+import '../../../constans/font_styles.dart';
+
 class HelpCenterList extends StatelessWidget {
   final String topicTitle;
   final List topicList;

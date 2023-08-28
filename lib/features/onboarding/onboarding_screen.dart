@@ -5,6 +5,8 @@ import 'package:mybank_app/features/onboarding/data/onboarding_data.dart';
 import 'package:mybank_app/features/onboarding/widget/onboarding_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../constans/font_styles.dart';
+
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
 

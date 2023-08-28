@@ -7,6 +7,8 @@ import 'package:mybank_app/features/dashboard_home/widget/dashboard_home_widget.
 import 'package:mybank_app/features/transaction_history/data/transaction_history_data.dart';
 import 'package:mybank_app/features/transaction_history/widget/transaction_history_widget.dart';
 
+import '../../constans/font_styles.dart';
+
 class DashboardHomePage extends StatefulWidget {
   const DashboardHomePage({super.key});
 
