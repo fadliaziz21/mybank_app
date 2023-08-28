@@ -33,6 +33,25 @@ class _ProfilePageState extends State<ProfilePage> {
             profilePictContainer(),
             accountInfoContainer(),
             profileListContainer(),
+            Container(
+              margin: Styles.eiTop20,
+              child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(AppColors.primaryColor),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: Styles.borderRadCircular25,
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Log Out',
+                  style: FontStyles.textWhite,
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -96,57 +115,16 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   profileListContainer() {
-    return Padding(
-      padding: Styles.eiAll10,
-      child: Container(
-        margin: Styles.eiTop10,
-        padding: Styles.eiAll5,
-        decoration: BoxDecoration(
-          color: AppColors.whiteColor,
-          borderRadius: Styles.borderRadCircular15,
-          border: Border.all(
-            color: AppColors.lightGreyColor,
-            width: 1.0,
-          ),
-        ),
-        child: Row(
-          children: [
-            Padding(
-              padding: Styles.eiAll5,
-              child: Icon(
-                Icons.verified,
-                color: AppColors.primaryColor,
-                size: 30.0,
-              ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: Styles.eiAll7,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'transactionName',
-                        textAlign: TextAlign.left,
-                        style: FontStyles.textDark14w500,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Spacer(),
-            IconButton(
-              icon: const Icon(Icons.arrow_forward_ios),
-              iconSize: 20.0,
-              color: AppColors.lightGreyColor,
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
-    );
+    return ListView.builder(
+        shrinkWrap: true,
+        itemCount: profileSettingList.length,
+        itemBuilder: (context, index) {
+          return ProfileList(
+            index,
+            profileSettingList.length,
+            iconName: profileSettingList[index].iconName,
+            settingName: profileSettingList[index].settingName,
+          );
+        });
   }
 }
