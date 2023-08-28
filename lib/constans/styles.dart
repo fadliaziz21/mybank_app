@@ -55,6 +55,11 @@ class Styles {
     ),
   );
 
+  static Decoration decorationCirclePrimary = const BoxDecoration(
+    color: AppColors.primaryColor,
+    shape: BoxShape.circle,
+  );
+
   static BorderRadius borderRadCircular10 = BorderRadius.circular(10.0);
   static BorderRadius borderRadCircular15 = BorderRadius.circular(15.0);
   static BorderRadius borderRadCircular25 = BorderRadius.circular(25.0);
