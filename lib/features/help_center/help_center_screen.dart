@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
-import 'package:mybank_app/features/help_center/help_center_data.dart';
+import 'package:mybank_app/features/help_center/data/help_center_data.dart';
 import 'package:mybank_app/features/help_center/widget/help_center_widget.dart';
 
 class HelpCenterPage extends StatefulWidget {

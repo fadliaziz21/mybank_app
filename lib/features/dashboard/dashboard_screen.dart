@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
-import 'package:mybank_app/features/dashboard/dashboard_data.dart';
+import 'package:mybank_app/features/dashboard/data/dashboard_data.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_screen.dart';
 import 'package:mybank_app/features/profile/profile_screen.dart';
 
