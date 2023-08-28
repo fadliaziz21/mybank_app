@@ -3,7 +3,7 @@ import 'package:mybank_app/constans/assets.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/pin/pin_data.dart';
-import 'package:mybank_app/features/pin/pin_widget.dart';
+import 'package:mybank_app/features/pin/widget/pin_widget.dart';
 
 class PinPage extends StatefulWidget {
   const PinPage({super.key});

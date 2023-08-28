@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/transaction_history/transaction_history_data.dart';
-import 'package:mybank_app/features/transaction_history/transaction_history_widget.dart';
+import 'package:mybank_app/features/transaction_history/widget/transaction_history_widget.dart';
 
 class TransactionHistoryPage extends StatefulWidget {
   const TransactionHistoryPage({super.key});

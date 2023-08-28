@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/onboarding/onboarding_data.dart';
-import 'package:mybank_app/features/onboarding/onboarding_widget.dart';
+import 'package:mybank_app/features/onboarding/widget/onboarding_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingPage extends StatefulWidget {

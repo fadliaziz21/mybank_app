@@ -3,9 +3,9 @@ import 'package:mybank_app/constans/assets.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_data.dart';
-import 'package:mybank_app/features/dashboard_home/dashboard_home_widget.dart';
+import 'package:mybank_app/features/dashboard_home/widget/dashboard_home_widget.dart';
 import 'package:mybank_app/features/transaction_history/transaction_history_data.dart';
-import 'package:mybank_app/features/transaction_history/transaction_history_widget.dart';
+import 'package:mybank_app/features/transaction_history/widget/transaction_history_widget.dart';
 
 class DashboardHomePage extends StatefulWidget {
   const DashboardHomePage({super.key});
