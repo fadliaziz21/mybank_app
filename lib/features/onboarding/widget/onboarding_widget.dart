@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mybank_app/constans/font_styles.dart';
 import 'package:mybank_app/constans/styles.dart';
-
-import '../../../constans/font_styles.dart';
 
 class OnBoardPage extends StatelessWidget {
   final Color color;

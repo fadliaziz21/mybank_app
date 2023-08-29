@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/assets.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/font_styles.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/pin/data/pin_data.dart';
 import 'package:mybank_app/features/pin/widget/pin_widget.dart';
-
-import '../../constans/font_styles.dart';
 
 class PinPage extends StatefulWidget {
   const PinPage({super.key});

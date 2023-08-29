@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/font_styles.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/profile/data/profile_data.dart';
 import 'package:mybank_app/features/profile/widget/profile_widget.dart';
-
-import '../../constans/font_styles.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
