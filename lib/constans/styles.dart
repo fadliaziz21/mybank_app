@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 
 class Styles {
+  static const SizedBox horizontalBreak5 = SizedBox(
+    width: 5.0,
+  );
+  static const SizedBox horizontalBreak15 = SizedBox(
+    width: 15.0,
+  );
+
   static const SizedBox lineBreak15 = SizedBox(
     height: 15.0,
   );
@@ -20,6 +27,23 @@ class Styles {
     spreadRadius: 1.0,
     blurRadius: 10.0,
     offset: Offset(0.0, 1.0),
+  );
+
+  static Decoration decorationAll10BorderLightGreyW1ShadowSmall = BoxDecoration(
+    color: AppColors.whiteColor,
+    borderRadius: Styles.borderRadCircular10,
+    boxShadow: const [
+      Styles.boxShadowSmall,
+    ],
+  );
+
+  static Decoration decorationAll10BorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
+    borderRadius: borderRadCircular10,
+    border: Border.all(
+      color: AppColors.lightGreyColor,
+      width: 1.0,
+    ),
   );
 
   static Decoration decorationBorderLightGreyW1 = BoxDecoration(
@@ -91,6 +115,8 @@ class Styles {
   static const EdgeInsets eiAll20 = EdgeInsets.all(20.0);
   static const EdgeInsets eiAll25 = EdgeInsets.all(25.0);
 
+  static const EdgeInsets eiAll10Top3 =
+      EdgeInsets.only(left: 10.0, top: 3.0, right: 10.0, bottom: 10.0);
   static const EdgeInsets eiAll10Top20 =
       EdgeInsets.only(left: 10.0, top: 20.0, right: 10.0, bottom: 10.0);
 
