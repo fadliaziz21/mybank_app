@@ -6,7 +6,22 @@ class FontStyles {
   static const TextStyle textPrimary = TextStyle(color: AppColors.primaryColor);
   static const TextStyle textDark = TextStyle(color: AppColors.darkColor);
   static const TextStyle textWhite = TextStyle(color: AppColors.whiteColor);
+  static const TextStyle textLightGrey =
+      TextStyle(color: AppColors.lightGreyColor);
+  static const TextStyle textGrey = TextStyle(color: AppColors.secondaryColor);
 
+  static const TextStyle textPrimary12 = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppColors.primaryColor,
+  );
+  static const TextStyle textPrimary12bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryColor,
+  );
   static const TextStyle textPrimary16bold = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 16,
@@ -95,6 +110,18 @@ class FontStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.whiteColor,
   );
+  static const TextStyle textWhite12 = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppColors.whiteColor,
+  );
+  static const TextStyle textWhite12bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: AppColors.whiteColor,
+  );
   static const TextStyle textWhite16 = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 16,
@@ -108,10 +135,29 @@ class FontStyles {
     color: AppColors.whiteColor,
   );
 
+  static const TextStyle textLightGrey12 = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppColors.lightGreyColor,
+  );
   static const TextStyle textLightGrey14 = TextStyle(
     fontFamily: FontFamily.montserrat,
     fontSize: 14,
     fontWeight: FontWeight.normal,
     color: AppColors.lightGreyColor,
+  );
+  static const TextStyle textLightGrey14bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: AppColors.lightGreyColor,
+  );
+
+  static const TextStyle textGrey14bold = TextStyle(
+    fontFamily: FontFamily.montserrat,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: AppColors.secondaryColor,
   );
 }
