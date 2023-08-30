@@ -2,11 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/font_family.dart';
 import 'package:mybank_app/features/dashboard/dashboard_screen.dart';
+import 'package:mybank_app/features/help_center/help_center_screen.dart';
+import 'package:mybank_app/features/login/login_screen.dart';
 import 'package:mybank_app/features/onboarding/onboarding_screen.dart';
 import 'package:mybank_app/features/pin/pin_screen.dart';
+import 'package:mybank_app/features/profile/profile_screen.dart';
 import 'package:mybank_app/features/transaction_history/transaction_history_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+int? initScreen;
+
+void main() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  initScreen = prefs.getInt('initScreen');
   runApp(const MyApp());
 }
 
@@ -23,67 +31,20 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: FontFamily.montserrat,
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: const OnBoardingPage(),
-      // home: const PinPage(),
-      // home: const DashboardPage(),
-      // home: const TransactionHistoryPage(),
-      initialRoute: '/transaction-history',
+      initialRoute: initScreen == null || initScreen == 0
+          ? '/'
+          : initScreen == 1
+              ? '/login'
+              : '/pin',
       routes: {
         '/': (context) => const OnBoardingPage(),
-        '/home': (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
+        '/login': (context) => const LoginPage(),
         '/pin': (context) => const PinPage(),
         '/dashboard': (context) => const DashboardPage(),
         '/transaction-history': (context) => const TransactionHistoryPage(),
+        '/help-center': (context) => const HelpCenterPage(),
+        '/profile': (context) => const ProfilePage(),
       },
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
