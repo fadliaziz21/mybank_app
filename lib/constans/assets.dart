@@ -4,6 +4,8 @@ class Assets {
   static const String myBankProfile =
       'assets/images/profile_picture/mybank_profilepicture.jpg';
 
+  static const String flagIndonesia = 'assets/images/flag-indonesia.png';
+
   static const Map<int, dynamic> onboardingImg = {
     1: 'assets/images/onboarding/mybank_onboarding-1.png',
     2: 'assets/images/onboarding/mybank_onboarding-2.png',
