@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mybank_app/constans/font_styles.dart';
 import 'package:mybank_app/constans/styles.dart';
 
 class DashboardMenu extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
-import 'package:mybank_app/features/dashboard/dashboard_data.dart';
+import 'package:mybank_app/features/dashboard/data/dashboard_data.dart';
 import 'package:mybank_app/features/dashboard_home/dashboard_home_screen.dart';
 import 'package:mybank_app/features/profile/profile_screen.dart';
 
@@ -30,6 +30,7 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteSmokeColor,
       body: SafeArea(
         child: _buildBody(),
       ),
@@ -89,8 +90,8 @@ class _DashboardPageState extends State<DashboardPage> {
               label: dashboardFooterList[3].labelName,
             ),
           ],
-          unselectedItemColor: Colors.grey.shade600,
           selectedItemColor: AppColors.primaryColor,
+          unselectedItemColor: Colors.grey.shade600,
         ),
       ),
     );

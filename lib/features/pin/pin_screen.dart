@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/assets.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/font_styles.dart';
 import 'package:mybank_app/constans/styles.dart';
-import 'package:mybank_app/features/pin/pin_data.dart';
-import 'package:mybank_app/features/pin/pin_widget.dart';
+import 'package:mybank_app/features/pin/data/pin_data.dart';
+import 'package:mybank_app/features/pin/widget/pin_widget.dart';
 
 class PinPage extends StatefulWidget {
   const PinPage({super.key});
@@ -173,7 +174,6 @@ class _PinPageState extends State<PinPage> {
     });
 
     if (pinIndex == 6) {
-      print(strPin);
       pinAuth(strPin);
     }
   }
@@ -218,9 +218,7 @@ class _PinPageState extends State<PinPage> {
   pinAuth(String pin) {
     String pinDefault = '123456';
     if (pinDefault == pin) {
-      print('benar');
-
-      Navigator.pushNamed(context, '/home');
+      Navigator.pushNamed(context, '/dashboard');
     } else {
       for (int i = 0; i < 6; i++) {
         clearPin();

@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
-import 'package:mybank_app/constans/font_family.dart';
 
 class Styles {
+  static const SizedBox horizontalBreak5 = SizedBox(
+    width: 5.0,
+  );
+  static const SizedBox horizontalBreak15 = SizedBox(
+    width: 15.0,
+  );
+
   static const SizedBox lineBreak15 = SizedBox(
     height: 15.0,
   );
@@ -23,13 +29,32 @@ class Styles {
     offset: Offset(0.0, 1.0),
   );
 
+  static Decoration decorationAll10BorderLightGreyW1ShadowSmall = BoxDecoration(
+    color: AppColors.whiteColor,
+    borderRadius: Styles.borderRadCircular10,
+    boxShadow: const [
+      Styles.boxShadowSmall,
+    ],
+  );
+
+  static Decoration decorationAll10BorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
+    borderRadius: borderRadCircular10,
+    border: Border.all(
+      color: AppColors.lightGreyColor,
+      width: 1.0,
+    ),
+  );
+
   static Decoration decorationBorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
     border: Border.all(
       color: AppColors.lightGreyColor,
       width: 1.0,
     ),
   );
   static Decoration decorationAll15BorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
     borderRadius: borderRadCircular15,
     border: Border.all(
       color: AppColors.lightGreyColor,
@@ -37,6 +62,7 @@ class Styles {
     ),
   );
   static Decoration decorationTop15BorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
     borderRadius: borderRadTop15,
     border: Border.all(
       color: AppColors.lightGreyColor,
@@ -44,17 +70,25 @@ class Styles {
     ),
   );
   static Decoration decorationBottom15BorderLightGreyW1 = BoxDecoration(
+    color: AppColors.whiteColor,
     borderRadius: borderRadBottom15,
     border: Border.all(
       color: AppColors.lightGreyColor,
       width: 1.0,
     ),
   );
+
+  static Decoration decorationCirclePrimary = const BoxDecoration(
+    color: AppColors.primaryColor,
+    shape: BoxShape.circle,
+  );
+
   static BorderRadius borderRadCircular10 = BorderRadius.circular(10.0);
   static BorderRadius borderRadCircular15 = BorderRadius.circular(15.0);
   static BorderRadius borderRadCircular25 = BorderRadius.circular(25.0);
   static BorderRadius borderRadCircular30 = BorderRadius.circular(30.0);
   static BorderRadius borderRadCircular60 = BorderRadius.circular(60.0);
+  static BorderRadius borderRadCircular65 = BorderRadius.circular(65.0);
 
   static const BorderRadius borderRadTop15 = BorderRadius.only(
     topLeft: Radius.circular(15.0),
@@ -74,12 +108,15 @@ class Styles {
     bottomRight: Radius.circular(25.0),
   );
 
+  static const EdgeInsets eiAll5 = EdgeInsets.all(5.0);
   static const EdgeInsets eiAll7 = EdgeInsets.all(7.0);
   static const EdgeInsets eiAll10 = EdgeInsets.all(10.0);
   static const EdgeInsets eiAll15 = EdgeInsets.all(15.0);
   static const EdgeInsets eiAll20 = EdgeInsets.all(20.0);
   static const EdgeInsets eiAll25 = EdgeInsets.all(25.0);
 
+  static const EdgeInsets eiAll10Top3 =
+      EdgeInsets.only(left: 10.0, top: 3.0, right: 10.0, bottom: 10.0);
   static const EdgeInsets eiAll10Top20 =
       EdgeInsets.only(left: 10.0, top: 20.0, right: 10.0, bottom: 10.0);
 
@@ -105,112 +142,4 @@ class Styles {
       EdgeInsets.only(left: 50.0, top: 25.0, right: 50.0, bottom: 25.0);
 
   static const EdgeInsets eiSymetric15 = EdgeInsets.symmetric(horizontal: 15.0);
-}
-
-class FontStyles {
-  static const TextStyle textPrimary = TextStyle(color: AppColors.primaryColor);
-  static const TextStyle textDark = TextStyle(color: AppColors.darkColor);
-  static const TextStyle textWhite = TextStyle(color: AppColors.whiteColor);
-
-  static const TextStyle textPrimary16bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-    color: AppColors.primaryColor,
-  );
-  static const TextStyle textPrimary18bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 18,
-    fontWeight: FontWeight.bold,
-    color: AppColors.primaryColor,
-  );
-  static const TextStyle textPrimary28bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 28,
-    fontWeight: FontWeight.bold,
-    color: AppColors.primaryColor,
-  );
-
-  static const TextStyle textDanger18bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 18,
-    fontWeight: FontWeight.bold,
-    color: AppColors.dangerColor,
-  );
-
-  static const TextStyle textDark12 = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 12,
-    fontWeight: FontWeight.normal,
-    color: AppColors.darkColor,
-  );
-  static const TextStyle textDark12w500 = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 12,
-    fontWeight: FontWeight.w500,
-    color: AppColors.darkColor,
-  );
-
-  static const TextStyle textDark14 = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 14,
-    fontWeight: FontWeight.normal,
-    color: AppColors.darkColor,
-  );
-  static const TextStyle textDark14w500 = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-    color: AppColors.darkColor,
-  );
-  static const TextStyle textDark16 = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 16,
-    fontWeight: FontWeight.normal,
-    color: AppColors.darkColor,
-  );
-  static const TextStyle textDark16bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-    color: AppColors.darkColor,
-  );
-  static const TextStyle textDark18bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 18,
-    fontWeight: FontWeight.bold,
-    color: AppColors.darkColor,
-  );
-  static const TextStyle textDark20bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    color: AppColors.darkColor,
-  );
-
-  static const TextStyle textWhite11bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 11,
-    fontWeight: FontWeight.bold,
-    color: AppColors.whiteColor,
-  );
-  static const TextStyle textWhite16 = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 16,
-    fontWeight: FontWeight.normal,
-    color: AppColors.whiteColor,
-  );
-  static const TextStyle textWhite18bold = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 18,
-    fontWeight: FontWeight.bold,
-    color: AppColors.whiteColor,
-  );
-
-  static const TextStyle textLightGrey14 = TextStyle(
-    fontFamily: FontFamily.montserrat,
-    fontSize: 14,
-    fontWeight: FontWeight.normal,
-    color: AppColors.lightGreyColor,
-  );
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
 import 'package:mybank_app/constans/styles.dart';
 
+import '../../../constans/font_styles.dart';
+
 class PinInput extends StatelessWidget {
   final TextEditingController textEditingController;
   final bool fieldPinCondition;
@@ -46,8 +48,8 @@ class PinKeyNum extends StatelessWidget {
       width: 60.0,
       height: 60.0,
       decoration: const BoxDecoration(
-        shape: BoxShape.circle,
         color: AppColors.whiteTransparentColor,
+        shape: BoxShape.circle,
       ),
       alignment: Alignment.center,
       child: MaterialButton(
@@ -78,8 +80,8 @@ class PinKeyIcon extends StatelessWidget {
       width: 60.0,
       height: 60.0,
       decoration: const BoxDecoration(
-        shape: BoxShape.circle,
         color: AppColors.whiteTransparentColor,
+        shape: BoxShape.circle,
       ),
       alignment: Alignment.center,
       child: MaterialButton(

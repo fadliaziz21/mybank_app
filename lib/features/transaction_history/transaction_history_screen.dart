@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mybank_app/constans/colors.dart';
+import 'package:mybank_app/constans/font_styles.dart';
 import 'package:mybank_app/constans/styles.dart';
-import 'package:mybank_app/features/transaction_history/transaction_history_data.dart';
-import 'package:mybank_app/features/transaction_history/transaction_history_widget.dart';
+import 'package:mybank_app/features/transaction_history/data/transaction_history_data.dart';
+import 'package:mybank_app/features/transaction_history/widget/transaction_history_widget.dart';
 
 class TransactionHistoryPage extends StatefulWidget {
   const TransactionHistoryPage({super.key});
@@ -33,6 +34,7 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
       length: 2,
       initialIndex: 0,
       child: Scaffold(
+        backgroundColor: AppColors.whiteSmokeColor,
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(80.0),
           child: _buildAppBar(),
@@ -65,8 +67,8 @@ class _TransactionHistoryPageState extends State<TransactionHistoryPage>
               margin: Styles.eiTop25,
               child: TabBar(
                 indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(35.0),
                   color: AppColors.primaryColor,
+                  borderRadius: BorderRadius.circular(35.0),
                 ),
                 indicatorSize: TabBarIndicatorSize.label,
                 controller: _tabController,
