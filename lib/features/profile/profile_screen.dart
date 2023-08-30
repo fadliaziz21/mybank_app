@@ -4,6 +4,7 @@ import 'package:mybank_app/constans/font_styles.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/profile/data/profile_data.dart';
 import 'package:mybank_app/features/profile/widget/profile_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -13,6 +14,17 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  void _logout() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('initScreen', 1);
+
+    buildShowDialog();
+    Future.delayed(
+      const Duration(seconds: 1),
+      () => Navigator.pushNamed(context, '/login'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,24 +43,23 @@ class _ProfilePageState extends State<ProfilePage> {
           children: [
             profilePictContainer(),
             accountInfoContainer(),
+            Styles.lineBreak25,
             profileListContainer(),
-            Container(
-              margin: Styles.eiTop20,
-              child: TextButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(AppColors.primaryColor),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: Styles.borderRadCircular25,
-                    ),
+            Styles.lineBreak25,
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(AppColors.primaryColor),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: Styles.borderRadCircular25,
                   ),
                 ),
-                onPressed: () {},
-                child: const Text(
-                  'Log Out',
-                  style: FontStyles.textWhite,
-                ),
+              ),
+              onPressed: _logout,
+              child: const Text(
+                'Log Out',
+                style: FontStyles.textWhite,
               ),
             ),
           ],
@@ -123,6 +134,17 @@ class _ProfilePageState extends State<ProfilePage> {
             profileSettingList.length,
             iconName: profileSettingList[index].iconName,
             settingName: profileSettingList[index].settingName,
+          );
+        });
+  }
+
+  buildShowDialog() {
+    return showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return const Center(
+            child: CircularProgressIndicator(),
           );
         });
   }

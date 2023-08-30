@@ -4,6 +4,7 @@ import 'package:mybank_app/constans/font_styles.dart';
 import 'package:mybank_app/constans/styles.dart';
 import 'package:mybank_app/features/onboarding/data/onboarding_data.dart';
 import 'package:mybank_app/features/onboarding/widget/onboarding_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingPage extends StatefulWidget {
@@ -22,6 +23,17 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     controller.dispose();
 
     super.dispose();
+  }
+
+  void _completeOnBoarding() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('initScreen', 1);
+
+    buildShowDialog();
+    Future.delayed(
+      const Duration(seconds: 1),
+      () => Navigator.pushNamed(context, '/login'),
+    );
   }
 
   @override
@@ -125,14 +137,23 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             ),
           ),
         ),
-        onPressed: () async {
-          Navigator.pushNamed(context, '/home');
-        },
+        onPressed: _completeOnBoarding,
         child: const Text(
           'Get Started',
           style: FontStyles.textWhite,
         ),
       ),
     );
+  }
+
+  buildShowDialog() {
+    return showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        });
   }
 }
