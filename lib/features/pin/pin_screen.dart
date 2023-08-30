@@ -174,7 +174,6 @@ class _PinPageState extends State<PinPage> {
     });
 
     if (pinIndex == 6) {
-      print(strPin);
       pinAuth(strPin);
     }
   }
@@ -219,9 +218,7 @@ class _PinPageState extends State<PinPage> {
   pinAuth(String pin) {
     String pinDefault = '123456';
     if (pinDefault == pin) {
-      print('benar');
-
-      Navigator.pushNamed(context, '/home');
+      Navigator.pushNamed(context, '/dashboard');
     } else {
       for (int i = 0; i < 6; i++) {
         clearPin();
